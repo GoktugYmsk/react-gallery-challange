@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 
 import { useNavigate } from 'react-router-dom';
+
 import Car from './components/car';
 import { initialData } from './assets/data';
 import './App.css';
@@ -16,11 +17,15 @@ function App() {
     navigate(`/Hyundai ${selectedCar.title}`);
   }
 
+  useEffect(() => {
+    navigate('/Hyundai');
+  }, [navigate]);
+
   return (
     <div className="App">
       <h1 className='h1'>Hyundai Cars</h1>
       <div className='hyundaiCar' >
-        <Car navigate={navigate} selectedCar={selectedCar} ssetSelectedCar={setSelectedCar} list={list} handleCarClick={handleCarClick} setSelectedCar={setSelectedCar} />
+        <Car selectedCar={selectedCar} ssetSelectedCar={setSelectedCar} list={list} handleCarClick={handleCarClick} setSelectedCar={setSelectedCar} />
       </div>
     </div>
   );
