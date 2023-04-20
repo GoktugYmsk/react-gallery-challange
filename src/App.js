@@ -4,12 +4,14 @@ import { initialData } from './assets/data';
 
 function App() {
   const [list, setList] = useState(initialData);
-  const [selectedCar, setSelectedCar] = useState(null);
+  const [selectedCar, setSelectedCar] = useState(true);
+  const [selectedInfo, setSelectedInfo] = useState(false)
 
   const handleCarClick = (id) => {
     const selectedCar = list.find(car => car.id === id);
     setSelectedCar(selectedCar);
     console.log('Selected car:', selectedCar);
+    setSelectedInfo(true)
   }
 
   return (
@@ -22,12 +24,12 @@ function App() {
           </div>
         ))}
       </div>
-      {selectedCar && (
-        <div className="carDetails">
-          <h2 className='selectedCarTitle'>{selectedCar.title}</h2>
+      <div className="carDetails">
+        <h2 className='selectedCarTitle'>{selectedCar.title}</h2>
+        {selectedInfo && (
           <p>{selectedCar.content}</p>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }
