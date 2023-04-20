@@ -1,35 +1,27 @@
 import React, { useState } from 'react';
+
 import { useNavigate } from 'react-router-dom';
-import './App.css';
+import Car from './components/car';
 import { initialData } from './assets/data';
+import './App.css';
 
 function App() {
   const [list, setList] = useState(initialData);
-  const [selectedCar, setSelectedCar] = useState(null);
+  const [selectedCar, setSelectedCar] = useState(false);
   const navigate = useNavigate();
 
   const handleCarClick = (id) => {
     const selectedCar = list.find(car => car.id === id);
     setSelectedCar(selectedCar);
-    navigate(`/${selectedCar.title}`);
+    navigate(`/Hyundai ${selectedCar.title}`);
   }
 
   return (
     <div className="App">
       <h1 className='h1'>Hyundai Cars</h1>
-      <div className="carList">
-        {list.map((car, index) => (
-          <div className="car" key={car.id} onClick={() => handleCarClick(car.id)}>
-            <h3 className='carName'>{car.title}</h3>
-          </div>
-        ))}
+      <div className='hyundaiCar' >
+        <Car navigate={navigate} selectedCar={selectedCar} ssetSelectedCar={setSelectedCar} list={list} handleCarClick={handleCarClick} setSelectedCar={setSelectedCar} />
       </div>
-      {selectedCar && (
-        <div className="carDetails">
-          <h2 className='selectedCarTitle'>{selectedCar.title}</h2>
-          <p>{selectedCar.content}</p>
-        </div>
-      )}
     </div>
   );
 }

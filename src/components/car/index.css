@@ -1,0 +1,15 @@
+.carDetails {
+    position: absolute;
+    top: 0;
+    margin-left: 300px;
+    z-index: 1;
+}
+
+.carContainer {
+    position: relative;
+}
+
+.carContainer.selected .carList {
+    opacity: 0.1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
