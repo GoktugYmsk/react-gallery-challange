@@ -1,6 +1,12 @@
-.carName{
-  color: red;
-}
 .h1{
   background: red;
+}
+.carList{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.carName{
+  cursor: pointer;
 }
