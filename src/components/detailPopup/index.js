@@ -1,16 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet';
+import { useNavigate } from 'react-router-dom';
+import { productList } from '../../assets/data';
 
-import { Helmet } from 'react-helmet'
+function Detail({ setcloseCarPage }) {
+  const [vehicle, setVehicle] = useState(productList);
+  const navigate = useNavigate();
 
-import { productList } from '../../assets/data'
-
-function Detail({navigate,setcloseCarPage}) {
-  const [vehicle, setVehicle] = useState(productList)
-
-  const comeBackMainPage = () =>{
-    navigate('/Hyundai')
-    setcloseCarPage(true)
-  }
+  const comeBackMainPage = () => {
+    navigate('/Hyundai');
+    setcloseCarPage(true);
+  };
 
   return (
     <div>
@@ -18,13 +18,13 @@ function Detail({navigate,setcloseCarPage}) {
         <title> Car Details </title>
       </Helmet>
       {vehicle.map(info => (
-        <div className='detailVehicle' >
-          <div className='carYear' >{info.productName}</div>
+        <div className='detailVehicle' key={info.productId}>
+          <div className='carYear'>{info.productName}</div>
         </div>
       ))}
       <button onClick={comeBackMainPage}>Anasayfa</button>
     </div>
-  )
+  );
 }
 
-export default Detail
+export default Detail;

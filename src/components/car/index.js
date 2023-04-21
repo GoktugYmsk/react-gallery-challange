@@ -42,7 +42,7 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
         )}
       </div>
       {!closeCarPage &&
-        <Detail navigate={navigate} setcloseCarPage={setSelectedCar} />
+        <Detail setcloseCarPage={setcloseCarPage} />
       }
     </>
   );

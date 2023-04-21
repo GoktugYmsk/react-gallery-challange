@@ -4,7 +4,6 @@ import { Routes, useNavigate, Route } from 'react-router-dom';
 
 import { initialData } from './assets/data';
 import Car from './components/car';
-import Detail from './components/detailPopup';
 import './App.css';
 
 function App() {
@@ -18,14 +17,19 @@ function App() {
     navigate(`/Hyundai ${selectedCar.title}`);
   }
 
+  useEffect(() => {
+    navigate('/Hyundai');
+  }, [navigate]);
+
   return (
     <div className="App">
-      <h1 className='h1'>Hyundai Cars</h1>
+      <h1 className='h1'>Hyundai</h1>
       <div className='hyundaiCar' >
-          <Car selectedCar={selectedCar} ssetSelectedCar={setSelectedCar} list={list} handleCarClick={handleCarClick} setSelectedCar={setSelectedCar} navigate={navigate} />
+        <Car selectedCar={selectedCar} setSelectedCar={setSelectedCar} list={list} handleCarClick={handleCarClick} navigate={navigate}/>
       </div>
     </div>
   );
 }
+
 
 export default App;
