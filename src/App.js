@@ -25,7 +25,7 @@ function App() {
     <div className="App">
       <h1 className='h1'>Hyundai Cars</h1>
       <div className='hyundaiCar' >
-        <Car selectedCar={selectedCar} ssetSelectedCar={setSelectedCar} list={list} handleCarClick={handleCarClick} setSelectedCar={setSelectedCar} />
+        <Car selectedCar={selectedCar} ssetSelectedCar={setSelectedCar} list={list} handleCarClick={handleCarClick} setSelectedCar={setSelectedCar} navigate={navigate}/>
       </div>
     </div>
   );
