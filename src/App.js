@@ -1,9 +1,10 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
-import { useNavigate } from 'react-router-dom';
+import { Routes, useNavigate, Route } from 'react-router-dom';
 
-import Car from './components/car';
 import { initialData } from './assets/data';
+import Car from './components/car';
+import Detail from './components/detailPopup';
 import './App.css';
 
 function App() {
@@ -17,15 +18,11 @@ function App() {
     navigate(`/Hyundai ${selectedCar.title}`);
   }
 
-  useEffect(() => {
-    navigate('/Hyundai');
-  }, [navigate]);
-
   return (
     <div className="App">
       <h1 className='h1'>Hyundai Cars</h1>
       <div className='hyundaiCar' >
-        <Car selectedCar={selectedCar} ssetSelectedCar={setSelectedCar} list={list} handleCarClick={handleCarClick} setSelectedCar={setSelectedCar} navigate={navigate}/>
+          <Car selectedCar={selectedCar} ssetSelectedCar={setSelectedCar} list={list} handleCarClick={handleCarClick} setSelectedCar={setSelectedCar} navigate={navigate} />
       </div>
     </div>
   );

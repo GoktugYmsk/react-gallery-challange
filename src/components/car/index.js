@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 
 import { Helmet } from 'react-helmet'
-import { Routes, useNavigate, Route } from 'react-router-dom';
+import Detail from '../detailPopup';
 
 import Popup from '../popup';
-import Detail from '../detailPopup';
 import './index.css';
 
 function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
+  const [closeCarPage, setcloseCarPage] = useState(true)
 
   const goToDetail = () => {
+    setcloseCarPage(false)
     navigate('/detail');
   }
 
@@ -19,24 +20,28 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
         <Helmet>
           <title> Hyundai </title>
         </Helmet>
-        <div className="carList">
-          {list.map(car => (
-            <div className="car" key={car.id} onClick={() => handleCarClick(car.id)}>
-              <h3 className='carName'>{car.title}</h3>
-            </div>
-          ))}
-        </div>
+        {closeCarPage &&
+          <>
+            <div className="carList">
+              {list.map(car => (
+                <div className="car" key={car.id} onClick={() => handleCarClick(car.id)}>
+                  <h3 className='carName'>{car.title}</h3>
+                </div>
+              ))}
+            </div><p>Daha Fazla Bilgi için</p>
+            <button onClick={goToDetail}>Devam et</button>
+          </>
+        }
         {selectedCar && (
           <div className="carDetails">
             <Popup selectedCar={selectedCar} setSelectedCar={setSelectedCar} />
           </div>
         )}
       </div>
-      <p>Daha Fazla Bilgi için</p>
-      <button onClick={goToDetail}>Devam et</button>
-      <Routes>
-        <Route path='/detail' element={<Detail />} />
-      </Routes>
+      {!closeCarPage &&
+        <Detail navigate={navigate} setcloseCarPage={setcloseCarPage} />
+      }
+
     </>
   );
 }
