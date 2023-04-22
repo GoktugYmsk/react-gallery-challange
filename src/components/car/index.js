@@ -11,7 +11,7 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
 
   const goToDetail = () => {
     setcloseCarPage(false)
-    navigate('/detail');
+    navigate('/Detail-Page');
   }
 
   return (

@@ -5,6 +5,15 @@
     z-index: 1;
 }
 
+.carInfoPage {
+    height: 400px;
+}
+
+.carList {
+    position: relative;
+    top: 50px;
+}
+
 .carContainer {
     position: relative;
     margin-top: 200px;
@@ -16,11 +25,14 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+.carContainer.selected .detailPageObject {
+    opacity: 0.1;
+}
+
 .detailPageObject {
     position: relative;
-    top: 300px;
+    top: 100px;
     margin-left: 650px;
-    padding-bottom: 120px;
 }
 
 .detailPageObject>p {

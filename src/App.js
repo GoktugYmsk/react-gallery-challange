@@ -21,10 +21,6 @@ function App() {
     navigate(`/Hyundai ${selectedCar.title}`);
   }
 
-  useEffect(() => {
-    navigate('/Hyundai');
-  }, [navigate]);
-
   return (
     <div className="App">
       <h1 className='h1'>Hyundai</h1>
