@@ -1,19 +1,46 @@
+.detailContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 40px;
+}
+
 .detailVehicle {
-    margin: 20px 0;
-  }
-  
-  table {
+    margin: 0;
+}
+
+table {
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
-  }
-  
-  td {
+}
+
+td {
     padding: 10px;
     border: 1px solid #ddd;
-  }
-  
-  td:first-child {
+}
+
+td:first-child {
     font-weight: bold;
-  }
-  
+}
+
+.infoDetail {
+    border: 2px solid rgb(8, 94, 148);
+}
+
+.mainPageBackButton {
+    position: relative;
+    border-style: none;
+    background: rgb(8, 94, 148);
+    color: white;
+    width: 130px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 50%;
+    top: 80px;
+    left: 650px;
+    margin-bottom: 80px;
+}
+.mainPageBackButton:hover{
+    background: rgb(31, 126, 186);
+}

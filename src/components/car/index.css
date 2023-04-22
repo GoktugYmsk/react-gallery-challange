@@ -18,20 +18,26 @@
 
 .detailPageObject {
     position: relative;
-    top: 100px;
+    top: 300px;
     margin-left: 650px;
+    padding-bottom: 120px;
+}
+
+.detailPageObject>p {
+    margin-left: 20px;
 }
 
 .detailPageObject>button {
     border-style: none;
     background: rgb(8, 94, 148);
     color: white;
-    width: 100px;
-    height: 40px;
+    width: 130px;
+    height: 60px;
     margin-left: 20px;
     cursor: pointer;
     border-radius: 50%;
 }
-.detailPageObject>button:hover{
+
+.detailPageObject>button:hover {
     background: rgb(31, 126, 186);
 }
