@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import { Helmet } from 'react-helmet'
 import Detail from '../detailPopup';
-
 import Popup from '../popup';
 import './index.css';
 

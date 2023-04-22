@@ -18,7 +18,7 @@ function App() {
   const handleCarClick = (id) => {
     const selectedCar = list.find(car => car.id === id);
     setSelectedCar(selectedCar);
-    navigate(`/Hyundai ${selectedCar.title}`);
+    navigate(`/Hyundai-${selectedCar.title}`);
   }
 
   return (
