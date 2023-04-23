@@ -4,6 +4,7 @@ import { Routes, useNavigate, Route } from 'react-router-dom';
 
 import { initialData } from './assets/data';
 import { productList } from './assets/data';
+import NavbarHyundai from './components/navbar';
 import Car from './components/car';
 import Footer from './components/footer';
 import './App.css';
@@ -24,7 +25,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className='h1'>Hyundai</h1>
+      <NavbarHyundai/>
       <div className='hyundaiCar' >
         <Car selectedCar={selectedCar} setSelectedCar={setSelectedCar} list={list} handleCarClick={handleCarClick} navigate={navigate}/>
       </div>

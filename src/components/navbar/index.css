@@ -1,0 +1,28 @@
+.navbar {
+    background: rgb(20, 78, 154);
+    color: white;
+}
+.navbarLogo{
+    width: 200px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.navlinkPart{
+    display: flex;
+    margin-left: 120px;
+    align-items: center;
+    justify-content: center;
+}
+
+.entrikifasyon {
+    color: rgb(0, 170, 210)
+}
+
+.navbarContainer .me-auto .nav-link {
+    margin-right: 40px;
+    color: white;
+}
+.navbarContainer .me-auto .nav-link :hover{
+    color: red;
+}
