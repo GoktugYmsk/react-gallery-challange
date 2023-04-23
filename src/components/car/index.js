@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import Detail from '../detailPopup';
 import Popup from '../popup';
+import Slider from '../slider/Slider';
 import './index.css';
 
 function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
@@ -24,6 +25,7 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
         <Helmet>
           <title> Hyundai </title>
         </Helmet>
+        <Slider list={list} />
         {closeCarPage && (
           <div className='carInfoPage' >
             <div className="carList">
