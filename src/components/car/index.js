@@ -7,7 +7,6 @@ import './index.css';
 
 function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
   const [closeCarPage, setcloseCarPage] = useState(true);
-  const [selected, setSelected] = useState(null);
 
   const goToDetail = () => {
     setcloseCarPage(false);
@@ -25,7 +24,10 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
         <Helmet>
           <title> Hyundai </title>
         </Helmet>
-        <Slider list={list} />
+        {closeCarPage &&
+          <div className='sliderPage' >
+            <Slider list={list} />
+          </div>}
         {closeCarPage && (
           <div className='carInfoPage' >
             <div className="carList">
@@ -47,6 +49,11 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
             <Popup selectedCar={selectedCar} setSelectedCar={setSelectedCar} />
           </div>
         )}
+        {closeCarPage &&
+          <div className='footerImage' >
+            <img src='https://www.hyundai.com/content/dam/hyundai/template_en/en/images/home/home-big-banner-maintenance-grill-of-navy-car-pc.jpg' />
+          </div>}
+        
       </div>
       {!closeCarPage && <Detail setcloseCarPage={setcloseCarPage} />}
     </>

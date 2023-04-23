@@ -1,47 +1,52 @@
-import React, { useState, useEffect } from 'react';
-import './index.css';
+import React from 'react';
+import Carousel from 'react-bootstrap/Carousel';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-function Slider({ list }) {
-  const [slideIndex, setSlideIndex] = useState(0);
 
-  useEffect(() => {
-    const slider = setInterval(() => {
-      setSlideIndex(prevIndex =>
-        prevIndex === list.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 5000);
+function Slider() {
+    return (
+        <Carousel>
+            <Carousel.Item>
+                <img 
+                    className="d-block w-100"
+                    src="https://www.hyundai.com/content/dam/hyundai/tr/tr/images/home/2022/haziran/one-cikanlar-1-new.jpg"
+                    alt="First slide"
+                    style={{ height: '800px' }}
+                />
+                <Carousel.Caption>
+                    <h3>First slide label</h3>
+                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+                <img
+                    className="d-block w-100"
+                    src="https://www.hyundai.com/content/dam/hyundai/tr/tr/images/find-a-car/pip/yeni-i10/one-cikanlar-image-2-new.jpg"
+                    alt="Second slide"
+                    style={{ height: '800px', objectFit: 'cover' }} 
+                />
 
-    return () => clearInterval(slider);
-  }, [list, slideIndex]);
+                <Carousel.Caption>
+                    <h3>Second slide label</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+                <img
+                    className="d-block w-100"
+                    src="https://www.hyundai.com/content/dam/hyundai/tr/tr/images/find-a-car/pip/elantra/CN7_FMC_K4_LHD_LIFESTYLE_MODEL_07_CMYK.jpg"
+                    alt="Third slide"
+                    style={{ height: '800px' }}
+                />
+                
 
-  const handlePrev = () => {
-    setSlideIndex(slideIndex => (slideIndex === 0 ? list.length - 1 : slideIndex - 1));
-  };
-
-  const handleNext = () => {
-    setSlideIndex(slideIndex => (slideIndex === list.length - 1 ? 0 : slideIndex + 1));
-  };
-
-  return (
-    <div className="slider">
-      <div className="slides">
-        {list.map((item, index) => (
-          <div
-            className={slideIndex === index ? 'slide active' : 'slide'}
-            key={index}
-          >
-            <img className='sliderImage' src={item.image} alt={`Image ${index}`} />
-          </div>
-        ))}
-      </div>
-      <button className="prev" onClick={handlePrev}>
-        &#10094;
-      </button>
-      <button className="next" onClick={handleNext}>
-        &#10095;
-      </button>   
-    </div>
-  );
+                <Carousel.Caption>
+                    <h3>Third slide label</h3>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </Carousel.Caption>
+            </Carousel.Item>
+        </Carousel>
+    );
 }
 
 export default Slider;

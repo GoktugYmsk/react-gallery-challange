@@ -1,3 +1,6 @@
+.App{
+  background: rgb(12, 35, 79);
+}
 .h1 {
   background: rgb(8, 94, 148);
   display: flex;
@@ -25,4 +28,8 @@
   flex-basis: calc(25% - 10px);
   margin: 5px;
   text-align: center;
+}
+
+.carInfoPage{
+  background: white;
 }

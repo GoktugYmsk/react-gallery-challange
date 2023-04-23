@@ -64,3 +64,8 @@
 .carName{
     margin-top: 100px;
 }
+.sliderPage{
+    box-shadow: 0 0 10px 12px rgb(20, 78, 154);
+    padding: 30px;
+    background: black;
+}

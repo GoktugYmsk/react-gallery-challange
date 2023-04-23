@@ -20,6 +20,9 @@ function Detail({ setcloseCarPage }) {
       </Helmet>
       {vehicle.map(info => (
         <div className='detailVehicle' key={info.productId}>
+          <div className='detailTittlePhoto' >
+            <img className='detailImage' src='https://www.hyundai.com/content/dam/hyundai/tr/tr/images/home/Haziran-2021/bayon/544x360-1.jpg' />
+          </div>
           <table>
             <div className='infoDetail' >
               <tr>
