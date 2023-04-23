@@ -1,11 +1,11 @@
 .modul{
     position: fixed;
     width: 900px;
-    height: 450px;
+    height: auto;
     z-index: 2;
     border: 3px dashed white;
     padding: 10px;
-    top: 150px;
+    top: 100px;
     background: rgb(8, 94, 148);
     color: white;
 }
@@ -22,4 +22,11 @@
 }
 .closePopup:hover{
     background: rgb(66, 130, 219);
+}
+.popupİmage{
+    height: 200px;
+    width: 35%;
+    object-fit: cover;
+    margin-top: 20px;
+    margin-left: 280px;
 }
