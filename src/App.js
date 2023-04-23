@@ -5,6 +5,7 @@ import { Routes, useNavigate, Route } from 'react-router-dom';
 import { initialData } from './assets/data';
 import { productList } from './assets/data';
 import Car from './components/car';
+import Footer from './components/footer';
 import './App.css';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       <div className='hyundaiCar' >
         <Car selectedCar={selectedCar} setSelectedCar={setSelectedCar} list={list} handleCarClick={handleCarClick} navigate={navigate}/>
       </div>
+      <Footer/>
     </div>
   );
 }
