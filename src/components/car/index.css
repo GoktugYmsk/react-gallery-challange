@@ -6,7 +6,7 @@
 }
 
 .carInfoPage {
-    height: 400px;
+    height: 100%;
 }
 
 .carList {
@@ -54,4 +54,10 @@
 
 .detailPageObject>button:hover {
     background: rgb(31, 126, 186);
+}
+.imageCar{
+    width: 450px;
+    height: 300px;
+    overflow: hidden;
+    object-fit: cover;
 }
