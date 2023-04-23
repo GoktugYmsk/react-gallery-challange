@@ -1,13 +1,13 @@
 import React from 'react';
+
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 
 function Slider() {
     return (
         <Carousel>
             <Carousel.Item>
-                <img 
+                <img
                     className="d-block w-100"
                     src="https://www.hyundai.com/content/dam/hyundai/tr/tr/images/home/2022/haziran/one-cikanlar-1-new.jpg"
                     alt="First slide"
@@ -23,7 +23,7 @@ function Slider() {
                     className="d-block w-100"
                     src="https://www.hyundai.com/content/dam/hyundai/tr/tr/images/find-a-car/pip/yeni-i10/one-cikanlar-image-2-new.jpg"
                     alt="Second slide"
-                    style={{ height: '800px', objectFit: 'cover' }} 
+                    style={{ height: '800px', objectFit: 'cover' }}
                 />
 
                 <Carousel.Caption>
@@ -38,8 +38,6 @@ function Slider() {
                     alt="Third slide"
                     style={{ height: '800px' }}
                 />
-                
-
                 <Carousel.Caption>
                     <h3>Third slide label</h3>
                     <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>

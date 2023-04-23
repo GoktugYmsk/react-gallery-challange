@@ -26,7 +26,9 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
         </Helmet>
         {closeCarPage &&
           <div className='sliderPage' >
-            <Slider list={list} />
+            <div className='sliderBar' >
+              <Slider list={list} />
+            </div>
           </div>}
         {closeCarPage && (
           <div className='carInfoPage' >
@@ -34,7 +36,7 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
               {list.map(car => (
                 <div className="car" key={car.id} onClick={() => handleCarClick(car.id)}>
                   <h3 className='carName'>{car.title}</h3>
-                  <img className='imageCar' src={getCarImage(car.id)} alt={`Image of ${car.title}`} />
+                  <img onClick={() => handleCarClick(car.id)} className='imageCar' src={getCarImage(car.id)} alt={`Image of ${car.title}`} />
                 </div>
               ))}
             </div>
@@ -51,9 +53,9 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
         )}
         {closeCarPage &&
           <div className='footerImage' >
-            <img src='https://www.hyundai.com/content/dam/hyundai/template_en/en/images/home/home-big-banner-maintenance-grill-of-navy-car-pc.jpg' />
+            <img className='footerPhoto' src='https://www.hyundai.com/content/dam/hyundai/template_en/en/images/home/home-big-banner-maintenance-grill-of-navy-car-pc.jpg' />
           </div>}
-        
+
       </div>
       {!closeCarPage && <Detail setcloseCarPage={setcloseCarPage} />}
     </>
