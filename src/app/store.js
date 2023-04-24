@@ -3,6 +3,6 @@ import configure from '../components/configure/configure'
 
 export const store = configureStore({
     reducer: {
-        activeTheme: configure,
+        componentControl: configure,
     },
 })

@@ -1,16 +1,21 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { productList } from '../../assets/data';
+import { setcloseCarPage } from '../configure/configure';
 import './index.css';
 
 function Detail({ setcloseCarPage }) {
   const [vehicle, setVehicle] = useState(productList);
+
   const navigate = useNavigate();
+
+  const dispatch = useDispatch()
 
   const comeBackMainPage = () => {
     navigate('/Hyundai');
-    setcloseCarPage(true);
+    dispatch(setcloseCarPage(true))
   };
 
   return (

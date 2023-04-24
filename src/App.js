@@ -25,12 +25,15 @@ function App() {
 
   return (
     <div className="App">
-      <NavbarHyundai selectedCar={selectedCar} />
+      <NavbarHyundai selectedCar={selectedCar} navigate={navigate} />
       <div className='hyundaiCar' >
         <Car selectedCar={selectedCar} setSelectedCar={setSelectedCar} list={list} handleCarClick={handleCarClick} navigate={navigate} />
       </div>
       <Footer selectedCar={selectedCar} />
-      <div className='onlineSupport' >Canlı Destek</div>
+      <div className='onlineSupport'>
+        Canlı Destek
+      </div>
+
     </div>
   );
 }

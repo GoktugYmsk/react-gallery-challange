@@ -1,19 +1,23 @@
 import React, { useState } from 'react';
 
 import { Helmet } from 'react-helmet';
+import { useDispatch, useSelector } from 'react-redux';
 
 import Detail from '../detailPopup';
 import Popup from '../popup';
 import Slider from '../slider'
+import { setcloseCarPage } from '../configure/configure';
 import './index.css';
 
 function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
-  const [closeCarPage, setcloseCarPage] = useState(true);
+  const dispatch = useDispatch()
 
   const goToDetail = () => {
-    setcloseCarPage(false);
+    dispatch(setcloseCarPage(false))
     navigate('/Detail-Page');
   };
+
+  const closeCarPage = useSelector((state) => state.componentControl.closeCarPage)
 
   const getCarImage = (carId) => {
     const selectedCar = list.find((car) => car.id === carId);

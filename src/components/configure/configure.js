@@ -1,20 +1,20 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-    
+    closeCarPage: null,
 }
 
 export const configure = createSlice({
-    name: 'theme',
+    name: 'control',
     initialState,
     reducers: {
-        setPassword: (state, acticon) => {
-            state.password = acticon.payload;
+        setcloseCarPage: (state,action) => {
+            state.closeCarPage = action.payload;
         },
     }
 })
 
 
-export const { setPassword } = configure.actions
+export const { setcloseCarPage } = configure.actions
 
 export default configure.reducer
