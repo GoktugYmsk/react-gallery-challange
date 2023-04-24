@@ -92,10 +92,12 @@
 .selected .sliderPage {
     opacity: 0.1;
 }
-.selected .footerImage{
+
+.selected .footerImage {
     opacity: 0.1;
 }
-.carCarePage{
+
+.carCarePage {
     position: relative;
     bottom: 400px;
     display: flex;
@@ -103,25 +105,82 @@
     align-items: center;
     justify-content: center;
 }
-.careHeader{
+
+.careHeader {
     color: white;
     padding-bottom: 40px;
 }
-.careInfo{
+
+.careInfo {
     color: white;
     padding-bottom: 60px;
 }
-.careInfoButton{
+
+.careInfoButton {
     background: #002c5f;
     border-style: none;
     width: 140px;
     height: 60px;
     font-weight: 600;
 }
-.careInfoButton > a{
+
+.careInfoButton>a {
     text-decoration: none;
     color: white;
 }
-.careInfoButton > a:hover{
+
+.careInfoButton>a:hover {
     text-decoration: underline;
+}
+
+.suvPacket {
+    width: 100%;
+    height: 200px;
+}
+
+.galleryContainer {
+    margin-top: 200px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+    /* bu yüksekliği ihtiyacınıza göre ayarlayabilirsiniz */
+}
+
+.galleryWrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.galleryMod>img {
+    width: 150px;
+    /* bu genişliği ihtiyacınıza göre ayarlayabilirsiniz */
+    height: auto;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.galleryArrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.leftArrow {
+    left: 0;
+}
+
+.rightArrow {
+    right: 0;
+}
+
+.footerUstBar {
+    margin-top: 400px;
 }

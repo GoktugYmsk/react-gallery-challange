@@ -11,6 +11,24 @@ import image9 from './img/kona-electric.png'
 import image10 from './img/elentra.png'
 import image11 from './img/santafehibrit.jpeg'
 
+import suvImageBayon from './img/suvbayon.jpeg'
+import suvImagIconic from './img/suviqocic5.jpeg'
+import suvImageKona from './img/suvkona.jpeg'
+import suvImageSantaFe from './img/suvsantafe.jpeg'
+import suvImageTucson from './img/suvtucson.jpeg'
+import suvImageKonaElektric from './img/suvkonaelektrik.jpeg'
+
+export const imageData = [
+  {
+    bayon:suvImageBayon,
+    iconic:suvImagIconic,
+    tucson:suvImageTucson,
+    santafe:suvImageSantaFe,
+    konaElectric:suvImageKonaElektric,
+    kona:suvImageKona,
+  }
+]
+
 export const initialData = [
   {
     "id": 1,

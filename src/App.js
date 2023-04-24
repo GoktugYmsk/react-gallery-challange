@@ -6,6 +6,7 @@ import NavbarHyundai from './components/navbar';
 import Car from './components/car';
 import Footer from './components/footer';
 import './App.css';
+import { useSelector } from 'react-redux';
 
 function App() {
   const [list, setList] = useState(initialData);
@@ -13,7 +14,7 @@ function App() {
   const [selectedCar, setSelectedCar] = useState(false);
   const navigate = useNavigate();
 
-  console.log(deneme)
+  const closeCarPage = useSelector((state) => state.componentControl.closeCarPage)
 
   const handleCarClick = (id) => {
     const selectedCar = list.find(car => car.id === id);
@@ -28,9 +29,11 @@ function App() {
         <Car selectedCar={selectedCar} setSelectedCar={setSelectedCar} list={list} handleCarClick={handleCarClick} navigate={navigate} />
       </div>
       <Footer selectedCar={selectedCar} />
-      <div className='onlineSupport'>
-        Canlı Destek
-      </div>
+      {closeCarPage &&
+        <div className='onlineSupport'>
+          Canlı Destek
+        </div>
+      }
     </div>
   );
 }
