@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-
 import { useNavigate } from 'react-router-dom';
-
 import { initialData } from './assets/data';
 import { productList } from './assets/data';
 import NavbarHyundai from './components/navbar';
@@ -33,10 +31,8 @@ function App() {
       <div className='onlineSupport'>
         Canlı Destek
       </div>
-
     </div>
   );
 }
-
 
 export default App;

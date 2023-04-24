@@ -1,19 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-    closeCarPage: null,
+    closeCarPage: true,
 }
 
 export const configure = createSlice({
     name: 'control',
     initialState,
     reducers: {
-        setcloseCarPage: (state,action) => {
+        setcloseCarPage: (state, action) => {
             state.closeCarPage = action.payload;
         },
     }
 })
-
 
 export const { setcloseCarPage } = configure.actions
 
