@@ -26,3 +26,6 @@
 .navbarContainer .me-auto .nav-link :hover{
     color: red;
 }
+.selected .navbarContainer{
+    opacity: 0.1;
+}

@@ -25,4 +25,7 @@
   .footer-right {
     width: 35%;
   }
+  .selected .footerBar{
+    opacity: 0.1;
+  }
   

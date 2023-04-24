@@ -54,7 +54,7 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
           </div>
         )}
         {closeCarPage &&
-          <div className='footerImage' >
+          <div className={`footerImage ${selectedCar ? 'selected' : ''}`}>
             <img className='footerPhoto' src='https://www.hyundai.com/content/dam/hyundai/template_en/en/images/home/home-big-banner-maintenance-grill-of-navy-car-pc.jpg' />
           </div>}
 

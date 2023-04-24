@@ -55,20 +55,25 @@
 .detailPageObject>button:hover {
     background: rgb(31, 126, 186);
 }
-.imageCar{
+
+.imageCar {
     width: 450px;
     height: 300px;
     overflow: hidden;
     object-fit: cover;
     cursor: pointer;
 }
-.carName{
+
+.carName {
     margin-top: 100px;
 }
-.sliderPage{
+
+.sliderPage {
     padding-bottom: 200px;
+    opacity: 1 none importan;
 }
-.sliderBar{
+
+.sliderBar {
     box-shadow: 0 0 10px 12px rgb(20, 78, 154);
     padding: 30px;
     background: black;
@@ -76,7 +81,15 @@
     width: 1400px;
     margin-left: 23px;
 }
-.footerPhoto{
+
+.footerPhoto {
     padding-top: 40px;
     width: 100%;
+}
+
+.selected .sliderPage {
+    opacity: 0.1;
+}
+.selected .footerImage{
+    opacity: 0.1;
 }
