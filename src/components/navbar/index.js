@@ -1,15 +1,18 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { setcloseCarPage } from '../configure/configure';
 
 import './index.css'
 
-function NavbarHyundai({ selectedCar, navigate, setcloseCarPage }) {
+function NavbarHyundai({ selectedCar, navigate }) {
     const imageLogo = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd_pHJvy-y5jCaMIjVnxuvlg_sCTlzKjRKSw&usqp=CAU'
 
+    const dispatch = useDispatch()
     
     const handleClick = () => {
+        dispatch(setcloseCarPage(true))
         navigate('/Hyundai');
     }
 

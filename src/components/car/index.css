@@ -19,6 +19,7 @@
     position: relative;
     margin-top: 200px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    height: 100%;
 }
 
 .carContainer.selected .carList {
@@ -82,8 +83,10 @@
 }
 
 .footerPhoto {
-    padding-top: 40px;
+    padding-top: 80px;
     width: 100%;
+    height: 800px;
+    margin-top: 80px;
 }
 
 .selected .sliderPage {
@@ -91,4 +94,34 @@
 }
 .selected .footerImage{
     opacity: 0.1;
+}
+.carCarePage{
+    position: relative;
+    bottom: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.careHeader{
+    color: white;
+    padding-bottom: 40px;
+}
+.careInfo{
+    color: white;
+    padding-bottom: 60px;
+}
+.careInfoButton{
+    background: #002c5f;
+    border-style: none;
+    width: 140px;
+    height: 60px;
+    font-weight: 600;
+}
+.careInfoButton > a{
+    text-decoration: none;
+    color: white;
+}
+.careInfoButton > a:hover{
+    text-decoration: underline;
 }
