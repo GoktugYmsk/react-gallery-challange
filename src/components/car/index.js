@@ -10,6 +10,7 @@ import Popup from '../popup';
 import Slider from '../slider'
 import { setcloseCarPage } from '../configure/configure';
 import { imageData } from '../../assets/data';
+import Carousel from './carouselFooter';
 import './index.css';
 
 function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
@@ -110,6 +111,7 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
               </div>
             </div>
           </div>}
+          <Carousel/>
       </div>
       {!closeCarPage && <Detail setcloseCarPage={setcloseCarPage} />}
     </>
