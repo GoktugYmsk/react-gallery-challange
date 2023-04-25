@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 
 import { Helmet } from 'react-helmet';
 import { useDispatch, useSelector } from 'react-redux';
+import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 
 import Detail from '../detailPopup';
 import Popup from '../popup';
@@ -12,7 +13,6 @@ import { imageData } from '../../assets/data';
 import './index.css';
 
 function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
-  const [offset, setOffset] = useState(0);
   const [turn, setTurn] = useState(imageData)
   const dispatch = useDispatch()
 
@@ -23,11 +23,11 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
   };
 
   const handlePrevClick = () => {
-    setOffset(Math.max(offset - 1, 0));
+
   };
 
   const handleNextClick = () => {
-    setOffset(Math.min(offset + 1, turn.length - 1));
+
   };
 
   const getCarImage = (carId) => {
@@ -63,9 +63,9 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
               <button onClick={goToDetail}>Devam et</button>
             </div>
             <div className='suvPacket'>
-              <h4>Suv</h4>
+              <h4 className='suvh4' >Hyundai SUV Ailesi</h4>
               <div className='galleryContainer'>
-                <div className='galleryWrapper' style={{ transform: `translateX(-${offset * 100}%)` }}>
+                <div className='galleryWrapper' >
                   {turn.map((picture, index) => (
                     <div className='galleryMod' key={index}>
                       <img src={picture.bayon} alt='bayon' />
@@ -78,11 +78,11 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
                   ))}
                 </div>
                 <div className='galleryMod-controls'>
-                  <button onClick={handlePrevClick} disabled={offset === 0}>
-                    &#60;
+                  <button className='rightClick' onClick={handlePrevClick} >
+                    <FaChevronRight />
                   </button>
-                  <button onClick={handleNextClick} disabled={offset === turn.length - 1}>
-                    &#62;
+                  <button className='leftClick' onClick={handleNextClick} >
+                    <FaChevronLeft />
                   </button>
                 </div>
               </div>
@@ -95,16 +95,16 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
           </div>
         )}
         {closeCarPage &&
-        <div className='footerUstBar' >
-          <div className={`footerImage ${selectedCar ? 'selected' : ''}`}>
-            <img className='footerPhoto' src='https://www.hyundai.com/content/dam/hyundai/template_en/en/images/home/home-big-banner-maintenance-grill-of-navy-car-pc.jpg' />
-            <div className='carCarePage' >
-              <h3 className='careHeader' >Bakım</h3>
-              <p className='careInfo' >Araç Bakımı neden düzenli yaptırılmalı?</p>
-              <button className='careInfoButton' >
-                <a href=''>Detaylar</a>
-              </button>
-            </div>
+          <div className='footerUstBar' >
+            <div className={`footerImage ${selectedCar ? 'selected' : ''}`}>
+              <img className='footerPhoto' src='https://www.hyundai.com/content/dam/hyundai/template_en/en/images/home/home-big-banner-maintenance-grill-of-navy-car-pc.jpg' />
+              <div className='carCarePage' >
+                <h3 className='careHeader' >Bakım</h3>
+                <p className='careInfo' >Araç Bakımı neden düzenli yaptırılmalı?</p>
+                <button className='careInfoButton' >
+                  <a href=''>Detaylar</a>
+                </button>
+              </div>
             </div>
           </div>}
       </div>

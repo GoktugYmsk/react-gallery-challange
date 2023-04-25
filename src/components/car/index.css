@@ -83,7 +83,7 @@
 }
 
 .footerPhoto {
-    padding-top: 80px;
+    padding-top: 10px;
     width: 100%;
     height: 800px;
     margin-top: 80px;
@@ -133,53 +133,77 @@
     text-decoration: underline;
 }
 
+.suvh4 {
+    margin-left: 560px;
+    font-weight: 800;
+    font-size: 40px;
+}
+
 .suvPacket {
     width: 100%;
-    height: 200px;
+    height: 400px;
+}
+
+.galleryWrapper {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    height: auto;
+    margin-left: 10px;
+    width: 1420px;
+    box-shadow: 0 0 6px 4px rgb(107, 100, 100);
 }
 
 .galleryContainer {
     margin-top: 200px;
-    position: relative;
     overflow: hidden;
     width: 100%;
     height: 400px;
-    /* bu yüksekliği ihtiyacınıza göre ayarlayabilirsiniz */
 }
 
-.galleryWrapper {
+.galleryMod {
     display: flex;
-    transition: transform 0.5s ease;
+    margin-left: 35px;
+    overflow: hidden;
 }
 
 .galleryMod>img {
-    width: 150px;
-    /* bu genişliği ihtiyacınıza göre ayarlayabilirsiniz */
+    margin-left: 25px;
+    width: 300px;
     height: auto;
     object-fit: cover;
     margin-right: 10px;
 }
 
-.galleryArrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    background-color: transparent;
-    border: none;
-    font-size: 24px;
-    color: white;
+.galleryMod-controls {
+    position: relative;
     cursor: pointer;
+    border-style: none;
 }
 
-.leftArrow {
-    left: 0;
+.rightClick {
+    width: 40px;
+    height: 40px;
+    border-style: none;
+    background: rgb(178, 184, 196);
+    opacity: 0.6;
+    position: relative;
+    left: 1390px;
+    bottom: 120px;
 }
 
-.rightArrow {
-    right: 0;
+.leftClick {
+    width: 40px;
+    height: 40px;
+    border-style: none;
+    background: rgb(178, 184, 196);
+    opacity: 0.6;
+    position: relative;
+    bottom: 120px;
+    right: 20px;
 }
+
 
 .footerUstBar {
     margin-top: 400px;
