@@ -27,7 +27,6 @@ function Slider() {
                     alt="Second slide"
                     style={{ height: '600px', objectFit: 'cover' }}
                 />
-
                 <Carousel.Caption>
                     <h3>Second slide label</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>

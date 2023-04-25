@@ -37,7 +37,6 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
 
   return (
     <>
-
       <div className={`carContainer ${selectedCar ? 'selected' : ''}`}>
         <Helmet>
           <title> Hyundai </title>

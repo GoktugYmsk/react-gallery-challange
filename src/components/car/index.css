@@ -70,16 +70,18 @@
 }
 
 .sliderPage {
-    padding-bottom: 200px;
+    background-color: #0c1b36;
+    height: 800px;
 }
 
 .sliderBar {
     box-shadow: 0 0 10px 12px rgb(20, 78, 154);
     padding: 30px;
     background: black;
-    margin-bottom: 30px;
     width: 1400px;
     margin-left: 23px;
+    position: relative;
+    top: 60px;
 }
 
 .footerPhoto {
