@@ -86,6 +86,10 @@
     top: 60px;
 }
 
+.footerImage {
+    height: 600px;
+}
+
 .footerPhoto {
     padding-top: 10px;
     width: 100%;

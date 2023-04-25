@@ -1,4 +1,46 @@
-.carousel{
-    width: 100vh;
+.carouselFooterPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.pageCarousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 20px;
+    width: 600px;
     height: 400px;
+}
+
+.carouselFooterPage>button {
+    background-color: transparent;
+    border: none;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.carouselFooterPage>button:focus {
+    outline: none;
+}
+
+.carouselFooterPage>p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.carouselFooterPage>h3 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.carouselPrew {
+    margin-right: 160px;
+}
+
+.carouselNext {
+    margin-left: 160px;
 }
