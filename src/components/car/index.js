@@ -84,6 +84,10 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
                     <FaChevronLeft />
                   </button>
                 </div>
+                <div className='actionCircle' >
+                    <div className='circle' ></div>
+                    <div className='circle' ></div>
+                </div>
               </div>
             </div>
           </div>
