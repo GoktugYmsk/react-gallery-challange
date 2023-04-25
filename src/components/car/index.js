@@ -85,8 +85,8 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
                   </button>
                 </div>
                 <div className='actionCircle' >
-                    <div className='circle' ></div>
-                    <div className='circle' ></div>
+                    <div onClick={handlePrevClick} className='circle' ></div>
+                    <div onClick={handleNextClick} className='circle' ></div>
                 </div>
               </div>
             </div>
