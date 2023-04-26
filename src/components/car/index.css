@@ -1,261 +1,467 @@
 .carDetails {
-    position: absolute;
-    top: 0;
-    margin-left: 300px;
-    z-index: 1;
+  position: absolute;
+  top: 0;
+  margin-left: 300px;
+  z-index: 1;
 }
 
 .carInfoPage {
-    height: 100%;
+  height: 100%;
 }
 
 .carList {
-    position: relative;
-    top: 50px;
-    padding-bottom: 100px;
+  position: relative;
+  top: 50px;
+  padding-bottom: 100px;
 }
 
 .carContainer {
-    position: relative;
-    margin-top: 200px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    height: 100%;
+  position: relative;
+  margin-top: 200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  height: 100%;
 }
 
 .carContainer.selected .carList {
-    opacity: 0.1;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  opacity: 0.1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .carContainer.selected .detailPageObject {
-    opacity: 0.1;
+  opacity: 0.1;
 }
 
 .detailPageObject {
-    position: relative;
-    top: 100px;
-    margin-left: 650px;
-    padding-bottom: 200px;
+  position: relative;
+  top: 100px;
+  margin-left: 650px;
+  padding-bottom: 200px;
 }
 
 .detailPageObject>p {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .detailPageObject>button {
-    border-style: none;
-    background: rgb(8, 94, 148);
-    color: white;
-    width: 130px;
-    height: 60px;
-    margin-left: 20px;
-    cursor: pointer;
-    border-radius: 50%;
+  border-style: none;
+  background: rgb(8, 94, 148);
+  color: white;
+  width: 130px;
+  height: 60px;
+  margin-left: 20px;
+  cursor: pointer;
+  border-radius: 50%;
 }
 
 .detailPageObject>button:hover {
-    background: rgb(31, 126, 186);
+  background: rgb(31, 126, 186);
 }
 
 .imageCar {
-    width: 450px;
-    height: 300px;
-    overflow: hidden;
-    object-fit: cover;
-    cursor: pointer;
+  width: 450px;
+  height: 300px;
+  overflow: hidden;
+  object-fit: cover;
+  cursor: pointer;
 }
 
 .carName {
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
 .sliderPage {
-    position: relative;
-    bottom: 200px;
-    background-color: #0c1b36;
-    height: 800px;
+  position: relative;
+  bottom: 200px;
+  background-color: #0c1b36;
+  height: 800px;
 }
 
 .sliderBar {
-    box-shadow: 0 0 10px 12px rgb(20, 78, 154);
-    padding: 30px;
-    background: black;
-    width: 1400px;
-    margin-left: 23px;
-    position: relative;
-    top: 60px;
+  box-shadow: 0 0 10px 12px rgb(20, 78, 154);
+  padding: 30px;
+  background: black;
+  width: 1400px;
+  margin-left: 23px;
+  position: relative;
+  top: 60px;
 }
 
 .footerImage {
-    height: 600px;
+  height: 600px;
 }
 
 .footerPhoto {
-    padding-top: 10px;
-    width: 100%;
-    height: 600px;
-    margin-top: 80px;
+  padding-top: 10px;
+  width: 100%;
+  height: 600px;
+  margin-top: 80px;
 }
 
 .selected .sliderPage {
-    opacity: 0.1;
+  opacity: 0.1;
 }
 
 .selected .footerImage {
-    opacity: 0.1;
+  opacity: 0.1;
 }
 
 .carCarePage {
-    position: relative;
-    bottom: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  bottom: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .careHeader {
-    color: white;
-    padding-bottom: 40px;
+  color: white;
+  padding-bottom: 40px;
 }
 
 .careInfo {
-    color: white;
-    padding-bottom: 60px;
+  color: white;
+  padding-bottom: 60px;
 }
 
 .careInfoButton {
-    background: #002c5f;
-    border-style: none;
-    width: 140px;
-    height: 60px;
-    font-weight: 600;
+  background: #002c5f;
+  border-style: none;
+  width: 140px;
+  height: 60px;
+  font-weight: 600;
 }
 
 .careInfoButton>a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .careInfoButton>a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .suvh4 {
-    margin-left: 560px;
-    font-weight: 800;
-    font-size: 40px;
+  margin-left: 560px;
+  font-weight: 800;
+  font-size: 40px;
 }
 
 .suvPacket {
-    width: 100%;
-    height: 400px;
+  width: 100%;
+  height: 400px;
 }
 
 /*********  galeri  *************/
 
 .galleryWrapper {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    height: auto;
-    margin-left: 10px;
-    width: 1420px;
-    box-shadow: 0 0 6px 4px rgb(107, 100, 100);
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  height: auto;
+  margin-left: 10px;
+  width: 1420px;
+  box-shadow: 0 0 6px 4px rgb(107, 100, 100);
 }
 
 .galleryContainer {
-    margin-top: 200px;
-    overflow: hidden;
-    width: 100%;
-    height: 400px;
+  margin-top: 200px;
+  overflow: hidden;
+  width: 100%;
+  height: 400px;
 }
 
 .galleryMod {
-    display: flex;
-    margin-left: 10px;
-    overflow: hidden;
+  display: flex;
+  margin-left: 10px;
+  overflow: hidden;
 }
 
 .firstPage {
-    display: flex;
-    margin-left: 10px;
-    overflow: hidden;
-    object-fit: cover;
+  display: flex;
+  margin-left: 10px;
+  overflow: hidden;
+  object-fit: cover;
 }
 
 .secondPage {
-    display: flex;
-    margin-left: 10px;
-    overflow: hidden;
+  display: flex;
+  margin-left: 10px;
+  overflow: hidden;
 }
 
 .firstPage>img {
-    margin-left: 30px;
-    width: 300px;
-    height: auto;
-    object-fit: cover;
-    margin-right: 10px;
+  margin-left: 30px;
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  margin-right: 10px;
 }
 
 .secondPage>img {
 
-    margin-left: 30px;
-    width: 300px;
-    height: auto;
-    object-fit: cover;
-    margin-right: 10px;
+  margin-left: 30px;
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+  margin-right: 10px;
 }
 
 .galleryMod-controls {
-    position: relative;
-    cursor: pointer;
-    border-style: none;
+  position: relative;
+  cursor: pointer;
+  border-style: none;
 }
 
 .rightClick {
-    width: 40px;
-    height: 40px;
-    border-style: none;
-    background: rgb(178, 184, 196);
-    opacity: 0.6;
-    position: relative;
-    left: 1386px;
-    bottom: 120px;
+  width: 40px;
+  height: 40px;
+  border-style: none;
+  background: rgb(178, 184, 196);
+  opacity: 0.6;
+  position: relative;
+  left: 1386px;
+  bottom: 120px;
 }
 
 .leftClick {
-    width: 40px;
-    height: 40px;
-    border-style: none;
-    background: rgb(178, 184, 196);
-    opacity: 0.6;
-    position: relative;
-    bottom: 120px;
-    right: 25px;
+  width: 40px;
+  height: 40px;
+  border-style: none;
+  background: rgb(178, 184, 196);
+  opacity: 0.6;
+  position: relative;
+  bottom: 120px;
+  right: 25px;
 }
 
 .circle {
-    width: 15px;
-    height: 15px;
-    margin-left: 10px;
-    border-radius: 50%;
-    background-color: grey;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+  border-radius: 50%;
+  background-color: grey;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 
-.circle.buttonactive{
-    background: rgb(0, 145, 255);
+.circle.buttonactive {
+  background: rgb(0, 145, 255);
 }
 
 .actionCircle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footerUstBar {
-    margin-top: 400px;
+  margin-top: 400px;
+}
+
+/*  Küçük ekranlar için */
+@media (min-width: 768px) {
+  .sliderPage {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  .sliderBar {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .carContainer {
+    flex-direction: column;
+  }
+
+  .carInfoPage {
+    padding: 20px;
+  }
+
+  .carList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .car {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .imageCar {
+    width: 100%;
+    height: auto;
+  }
+
+  .suvPacket {
+    margin-top: 30px;
+  }
+
+  .galleryContainer {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .galleryWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .galleryMod {
+    width: 100%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+
+  .firstPage,
+  .secondPage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .firstPage img,
+  .secondPage img {
+    width: 50%;
+    height: auto;
+    margin: 10px;
+  }
+
+  .galleryMod-controls {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .rightClick,
+  .leftClick {
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+  }
+
+  .actionCircle {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: gray;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .buttonactive {
+    background-color: black;
+  }
+
+  .footerUstBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footerImage {
+    width: 100%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+
+  .footerPhoto {
+    width: 100%;
+    height: auto;
+  }
+
+  .carCarePage {
+    padding: 10px;
+    background-color: white;
+    margin-top: -20px;
+  }
+
+  .careHeader {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  .careInfo {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+
+  .careInfoButton {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .carList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .car {
+    margin-bottom: 10px;
+  }
+
+  .carName {
+    font-size: 16px;
+  }
+
+  .imageCar {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .detailPageObject {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .suvPacket {
+    margin-top: 20px;
+  }
+
+  .galleryContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .galleryMod {
+    margin-bottom: 10px;
+  }
+
+  .galleryMod-controls {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .circle {
+    margin: 0 5px;
+  }
 }

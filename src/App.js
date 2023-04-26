@@ -38,6 +38,4 @@ function App() {
   );
 }
 
-/* car sayfasında galeri bölümüne aktiflik kazandırılacak */
-
 export default App;

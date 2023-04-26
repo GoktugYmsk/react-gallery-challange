@@ -76,7 +76,7 @@ function NavbarHyundai({ selectedCar, navigate }) {
               <Nav.Link href="#pricing">Satış Sonrası</Nav.Link>
               <Nav.Link onClick={openAbout} className='about' href="#pricing">Hakkımızda</Nav.Link>
               {activeAbout &&
-                <div ref={dropdownRef} className='aboutPopup' >
+                <div ref={dropdownRef} className='dropdown' >
                   <div className="dropdown-item-about">Özellik 1</div>
                   <div className="dropdown-item-about">Özellik 2</div>
                   <div className="dropdown-item-about">Özellik 3</div>
