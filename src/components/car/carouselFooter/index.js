@@ -55,6 +55,15 @@ function Carousel() {
         </div>
       </div>
       <button className='carouselNext' onClick={next}>&gt;</button>
+      <div className="pagination">
+        {pages.map((_, index) => (
+          <div
+            key={index}
+            className={`page ${currentPage === index ? "active" : ""}`}
+            onClick={() => setCurrentPage(index)}
+          />
+        ))}
+      </div>
     </div>
   );
 }

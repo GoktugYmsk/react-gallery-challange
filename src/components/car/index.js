@@ -14,6 +14,7 @@ import Carousel from './carouselFooter';
 import './index.css';
 
 function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
+  const [optionPage, setOptionPage] = useState(true)
   const [turn, setTurn] = useState(imageData)
   const dispatch = useDispatch()
 
@@ -24,11 +25,11 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
   };
 
   const handlePrevClick = () => {
-
+    setOptionPage(true)
   };
 
   const handleNextClick = () => {
-
+    setOptionPage(false)
   };
 
   const getCarImage = (carId) => {
@@ -68,12 +69,20 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
                 <div className='galleryWrapper' >
                   {turn.map((picture, index) => (
                     <div className='galleryMod' key={index}>
-                      <img src={picture.bayon} alt='bayon' />
-                      <img src={picture.iconic} alt='iconic' />
-                      <img src={picture.kona} alt='kona' />
-                      <img src={picture.konaElectric} alt='kona electric' />
-                      <img src={picture.santafe} alt='santafe' />
-                      <img src={picture.tucson} alt='tucson' />
+                      {optionPage &&
+                        <div className='firstPage' >
+                          <img src={picture.bayon} alt='bayon' />
+                          <img src={picture.iconic} alt='iconic' />
+                          <img src={picture.kona} alt='kona' />
+                          <img src={picture.konaElectric} alt='kona electric' />
+                        </div>
+                      }
+                      {!optionPage &&
+                        <div className='secondPage' >
+                          <img src={picture.santafe} alt='santafe' />
+                          <img src={picture.tucson} alt='tucson' />
+                        </div>
+                      }
                     </div>
                   ))}
                 </div>
