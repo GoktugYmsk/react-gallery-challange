@@ -49,6 +49,10 @@ function Carousel() {
         <p>{pages[currentPage].date}</p>
         <br />
         <h5>{pages[currentPage].content}</h5>
+        <div className='buttonControl' >
+          <button className='carouselAddButton' >Daha Fazla Yükle</button>
+          <button className='carouselInspectButton' >İncele</button>
+        </div>
       </div>
       <button className='carouselNext' onClick={next}>&gt;</button>
     </div>

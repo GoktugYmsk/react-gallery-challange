@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+
 }
 
 .pageCarousel {
@@ -12,8 +13,9 @@
     justify-content: center;
     text-align: center;
     margin: 0 20px;
-    width: 600px;
-    height: 400px;
+    width: 650px;
+    height: 500px;
+    border: 2px solid red;
 }
 
 .carouselFooterPage>button {
@@ -33,6 +35,7 @@
 }
 
 .carouselFooterPage>h3 {
+    position: absolute;
     margin: 0;
     font-size: 2rem;
 }
@@ -43,4 +46,35 @@
 
 .carouselNext {
     margin-left: 160px;
+}
+
+.buttonControl {
+    position: absolute;
+    margin-top: 340px;
+    display: flex;
+}
+
+.carouselAddButton {
+    background: #002c5f;
+    width: 200px;
+    height: 60px;
+    color: white;
+    border-style: none;
+}
+
+.carouselAddButton:hover {
+    text-decoration: underline;
+}
+
+.carouselInspectButton {
+    background: #002c5f;
+    width: 200px;
+    height: 60px;
+    color: white;
+    border-style: none;
+    margin-left: 30px;
+}
+
+.carouselInspectButton:hover {
+    text-decoration: underline;
 }
