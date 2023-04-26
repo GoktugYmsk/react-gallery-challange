@@ -11,6 +11,7 @@ function NavbarHyundai({ selectedCar, navigate }) {
   const imageLogo =
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd_pHJvy-y5jCaMIjVnxuvlg_sCTlzKjRKSw&usqp=CAU';
   const [active, setActive] = useState(false);
+  const [activeAbout, setActiveAbout] = useState(false)
   const dropdownRef = useRef(null);
 
   const dispatch = useDispatch();
@@ -39,8 +40,13 @@ function NavbarHyundai({ selectedCar, navigate }) {
   const handleClickOutside = (e) => {
     if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
       setActive(false);
+      setActiveAbout(false)
     }
   };
+
+  const openAbout = () => {
+    setActiveAbout(true)
+  }
 
   return (
     <>
@@ -68,12 +74,20 @@ function NavbarHyundai({ selectedCar, navigate }) {
               )}
               <Nav.Link href="#features">Satış</Nav.Link>
               <Nav.Link href="#pricing">Satış Sonrası</Nav.Link>
-              <Nav.Link href="#pricing">Hakkımızda</Nav.Link>
+              <Nav.Link onClick={openAbout} className='about' href="#pricing">Hakkımızda</Nav.Link>
+              {activeAbout &&
+                <div ref={dropdownRef} className='aboutPopup' >
+                  <div className="dropdown-item-about">Özellik 1</div>
+                  <div className="dropdown-item-about">Özellik 2</div>
+                  <div className="dropdown-item-about">Özellik 3</div>
+                </div>
+              }
               <Nav.Link href="#pricing">Yetkili Satıcı ve Servis</Nav.Link>
             </div>
           </Nav>
         </Container>
       </Navbar>
+
     </>
   );
 }

@@ -87,16 +87,16 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
                   ))}
                 </div>
                 <div className='galleryMod-controls'>
-                  <button className='rightClick' onClick={handlePrevClick} >
+                  <button className='rightClick' onClick={handleNextClick}>
                     <FaChevronRight />
                   </button>
-                  <button className='leftClick' onClick={handleNextClick} >
+                  <button className='leftClick' onClick={handlePrevClick} >
                     <FaChevronLeft />
                   </button>
                 </div>
                 <div className='actionCircle' >
-                  <div onClick={handlePrevClick} className='circle' ></div>
-                  <div onClick={handleNextClick} className='circle' ></div>
+                  <div onClick={handlePrevClick} className={`circle ${optionPage ? "buttonactive" : ""}`} ></div>
+                  <div onClick={handleNextClick} className={`circle ${!optionPage ? "buttonactive" : ""}`} ></div>
                 </div>
               </div>
             </div>
