@@ -8,27 +8,27 @@ function Carousel() {
     {
       title: 'Medya Merkezi',
       content: 'Charge myHyundai, Avrupa’da 500.000 Şarj Noktasına Ulaştı.',
-      date: 'Yerel|2023.04.18',
+      date: 'Yerel | 2023.04.18',
     },
     {
       title: 'Medya Merkezi',
       content: 'Hyundai 2030 Yılına Kadar İlk Üç Elektrikli Araç Üreticisinden Biri Olacak.',
-      date: 'Yerel|2023.04.11',
+      date: 'Yerel | 2023.04.11',
     },
     {
       title: 'Medya Merkezi',
       content: 'Hyundai IONIQ 6 Dünyada Yılın Otomobili WCOTY Seçildi.',
-      date: 'Yerel|2023.04.06',
+      date: 'Yerel | 2023.04.06',
     },
     {
       title: 'Medya Merkezi',
       content: 'Elektrifikasyonda Üst Düzey Performans: Hyundai IONIQ 5 N.',
-      date: 'Yerel|2023.03.30',
+      date: 'Yerel | 2023.03.30',
     },
     {
       title: 'Medya Merkezi',
       content: 'Hyundai Elektrikli Araçlar İçin Otomatik Şarj Robotu Geliştirdi.',
-      date: 'Yerel|2023.03.22',
+      date: 'Yerel | 2023.03.22',
     }
   ];
 

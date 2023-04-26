@@ -86,8 +86,8 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
                   </button>
                 </div>
                 <div className='actionCircle' >
-                    <div onClick={handlePrevClick} className='circle' ></div>
-                    <div onClick={handleNextClick} className='circle' ></div>
+                  <div onClick={handlePrevClick} className='circle' ></div>
+                  <div onClick={handleNextClick} className='circle' ></div>
                 </div>
               </div>
             </div>
@@ -111,7 +111,9 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
               </div>
             </div>
           </div>}
-          <Carousel/>
+        {closeCarPage &&
+          <Carousel />
+        }
       </div>
       {!closeCarPage && <Detail setcloseCarPage={setcloseCarPage} />}
     </>
