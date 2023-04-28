@@ -1,10 +1,12 @@
 import { useState, useEffect, useRef } from 'react';
+
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { useDispatch } from 'react-redux';
-import { setcloseCarPage } from '../configure/configure';
 
+import { setcloseCarPage } from '../configure/configure';
+import SalesScreen from '../car/salesScreen';
 import './index.css';
 
 function NavbarHyundai({ selectedCar, navigate }) {
@@ -13,6 +15,7 @@ function NavbarHyundai({ selectedCar, navigate }) {
   const [active, setActive] = useState(false);
   const [activeAbout, setActiveAbout] = useState(false)
   const dropdownRef = useRef(null);
+  const [sales,setSales] = useState(false)
 
   const dispatch = useDispatch();
 

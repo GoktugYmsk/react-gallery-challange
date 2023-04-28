@@ -17,6 +17,8 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
   const [optionPage, setOptionPage] = useState(true)
   const [turn, setTurn] = useState(imageData)
   const dispatch = useDispatch()
+  const [buttonActive,setButtonActive] = useState(true)
+  
 
   const closeCarPage = useSelector((state) => state.componentControl.closeCarPage)
   const goToDetail = () => {
@@ -30,6 +32,7 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
 
   const handleNextClick = () => {
     setOptionPage(false)
+    setButtonActive(true)
   };
 
   const getCarImage = (carId) => {
@@ -87,7 +90,7 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
                   ))}
                 </div>
                 <div className='galleryMod-controls'>
-                  <button className='rightClick' onClick={handleNextClick}>
+                  <button className={`rightClick ${buttonActive ? 'buttonActive' : ''}`} onClick={handleNextClick}>
                     <FaChevronRight />
                   </button>
                   <button className='leftClick' onClick={handlePrevClick} >
