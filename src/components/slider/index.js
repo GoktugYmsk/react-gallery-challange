@@ -16,7 +16,7 @@ function Slider() {
             src={warningMessage}
             alt="First slide"
             style={{
-              maxHeight: '500px',
+              maxHeight: '620px',
               maxWidth: '100%',
               objectFit: 'cover',
             }}
@@ -28,7 +28,7 @@ function Slider() {
             src="https://www.hyundai.com/content/dam/hyundai/tr/tr/images/find-a-car/pip/yeni-i10/one-cikanlar-image-2-new.jpg"
             alt="Second slide"
             style={{
-              maxHeight: '500px',
+              maxHeight: '620px',
               maxWidth: '100%',
               objectFit: 'cover',
             }}
@@ -44,7 +44,7 @@ function Slider() {
             src="https://www.hyundai.com/content/dam/hyundai/tr/tr/images/find-a-car/pip/elantra/CN7_FMC_K4_LHD_LIFESTYLE_MODEL_07_CMYK.jpg"
             alt="Third slide"
             style={{
-              maxHeight: '500px',
+              maxHeight: '620px',
               maxWidth: '100%',
               objectFit: 'cover',
             }}
@@ -60,7 +60,7 @@ function Slider() {
             src="https://www.hyundai.com/content/dam/hyundai/tr/tr/images/home/2022/haziran/one-cikanlar-1-new.jpg"
             alt="Fourth slide"
             style={{
-              maxHeight: '500px',
+              maxHeight: '620px',
               maxWidth: '100%',
               objectFit: 'cover',
             }}
@@ -76,7 +76,7 @@ function Slider() {
             src="https://www.hyundai.com/content/dam/hyundai/tr/tr/images/home/2023/vision23-kapak-1860x720.jpg"
             alt="Fourth slide"
             style={{
-              maxHeight: '500px',
+              maxHeight: '620px',
               maxWidth: '100%',
               objectFit: 'cover',
             }}

@@ -24,6 +24,7 @@ function SalesScreen() {
     <div className='containerSales'>
       <div className='carouselSales' >
         <img className='carouselBackround' src={image} />
+        <div className='salesHeaderBackround' ></div>
       </div>
       <h1 className='salesHeader' >Yetkili Satıcı ve Servis Bul</h1>
       <br />

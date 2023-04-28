@@ -46,11 +46,31 @@
   justify-content: center;
   border-radius: 10px 0 0 0;
 }
-.onlineSupport:hover{
+
+.onlineSupport:hover {
   background: rgb(31, 126, 186);
 }
-.messageIcon{
+
+.messageIcon {
   margin-top: 6px;
   font-size: 30px;
   margin-right: 20px;
+}
+
+.rightBar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(187, 176, 176);
+  justify-content: end;
+  right: 0;
+  top: 100px;
+  bottom: 0;
+  z-index: 2;
+  height: 436px;
+  font-size: 50px;
+}
+
+.rightBarIcons {
+  cursor: pointer;
 }

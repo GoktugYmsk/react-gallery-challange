@@ -5,19 +5,31 @@
     align-content: center;
     justify-content: center;
 }
-
 .containerSales .salesHeader {
     position: relative;
-    bottom: 220px;
-    left: 500px;
+    bottom: 480px;
+    left: 520px;
 }
+
+.salesHeaderBackround {
+    position: relative;
+    width: 1000px;
+    height: 300px;
+    background: white;
+    opacity: 0.6;
+    left: 240px;
+    bottom: 300px;
+}
+
 
 .salesAltPhoto {
     display: flex;
-    align-content: center;
+    position: relative;
+    align-items: center;
     justify-content: center;
     border: 2px solid red;
     height: 200px;
+    bottom: 200px;
 }
 
 .salesAltPhoto>img {
@@ -60,6 +72,8 @@
 
 .salesInfo {
     display: flex;
+    position: relative;
+    bottom: 320px;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
@@ -67,7 +81,6 @@
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
-    padding-bottom: 60px;
 }
 
 .mainDirect {
