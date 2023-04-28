@@ -69,6 +69,20 @@ function Slider() {
             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
           </Carousel.Caption>
         </Carousel.Item>
+        <Carousel.Item>
+          <h3>Hyundai Vision 23.sayı</h3>
+          <button>Yeni sayımızı okumak için tıklayınız</button>
+          <img
+            className="d-block w-100"
+            src="https://www.hyundai.com/content/dam/hyundai/tr/tr/images/home/2023/vision23-kapak-1860x720.jpg"
+            alt="Fourth slide"
+            style={{
+              maxHeight: '500px',
+              maxWidth: '100%',
+              objectFit: 'cover',
+            }}
+          />
+        </Carousel.Item>
       </Carousel>
     </div>
   );

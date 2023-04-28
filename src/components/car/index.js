@@ -45,15 +45,15 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
   setInterval(() => {
     const changeTittle = 'Sizin için buradayız'
     document.title = changeTittle
-  }, 3000);
+  }, 4000);
   setInterval(() => {
     const changeTittle = 'Hyundai'
     document.title = changeTittle
-  }, 6000);
+  }, 8000);
   setInterval(() => {
     const changeTittle = 'Hyundai Yetkili Servis'
     document.title = changeTittle
-  }, 9000);
+  }, 12000);
 
   return (
     <>

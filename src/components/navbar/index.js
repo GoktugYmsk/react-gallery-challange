@@ -20,6 +20,7 @@ function NavbarHyundai({ selectedCar, navigate }) {
 
   const handleClick = () => {
     dispatch(setcloseCarPage(true));
+    dispatch(setSales(false))
     navigate('/Hyundai');
   };
 
