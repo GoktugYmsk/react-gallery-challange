@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
+
+import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { BiMessageDetail } from 'react-icons/bi';
+
 import { initialData } from './assets/data';
 import { productList } from './assets/data';
 import NavbarHyundai from './components/navbar';
 import Car from './components/car';
 import Footer from './components/footer';
 import './App.css';
-import { useSelector } from 'react-redux';
 
 function App() {
   const [list, setList] = useState(initialData);
@@ -31,7 +34,7 @@ function App() {
       <Footer selectedCar={selectedCar} />
       {closeCarPage &&
         <div className='onlineSupport'>
-          Canlı Destek
+          <BiMessageDetail className='messageIcon' /> Hyundai Canlı Destek
         </div>
       }
     </div>
