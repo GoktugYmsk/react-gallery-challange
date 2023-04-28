@@ -53,6 +53,10 @@
   width: fit-content;
 }
 
+.imageWrapper > img{
+  width: 720px;
+}
+
 .imageWrapper p {
   position: absolute;
   top: 50%;

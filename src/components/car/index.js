@@ -11,14 +11,16 @@ import Slider from '../slider'
 import { setcloseCarPage } from '../configure/configure';
 import { imageData } from '../../assets/data';
 import Carousel from './carouselFooter';
+import SalesScreen from './salesScreen';
 import './index.css';
 
 function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
   const [optionPage, setOptionPage] = useState(true)
   const [turn, setTurn] = useState(imageData)
   const dispatch = useDispatch()
-  const [buttonActive,setButtonActive] = useState(true)
-  
+  const [buttonActive, setButtonActive] = useState(true)
+  const sales = useSelector((state) => state.componentControl.sales)
+
 
   const closeCarPage = useSelector((state) => state.componentControl.closeCarPage)
   const goToDetail = () => {
@@ -66,6 +68,9 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
               <p>Daha Fazla Bilgi için</p>
               <button onClick={goToDetail}>Devam et</button>
             </div>
+            {
+              sales && <SalesScreen />
+            }""
             <div className='suvPacket'>
               <h4 className='suvh4' >Hyundai SUV Ailesi</h4>
               <div className='galleryContainer'>

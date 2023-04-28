@@ -1,11 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import './index.css';
 
 function Popup({ selectedCar, setSelectedCar }) {
+  const navigate = useNavigate()
 
   const closePopupModule = () => {
     setSelectedCar(false);
+    navigate('Hyundai')
   }
 
   return (

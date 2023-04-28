@@ -465,3 +465,7 @@
     margin: 0 5px;
   }
 }
+
+.rightClick .buttonActive {
+  background: red;
+}

@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
     closeCarPage: true,
+    sales: false,
 }
 
 export const configure = createSlice({
@@ -10,10 +11,12 @@ export const configure = createSlice({
     reducers: {
         setcloseCarPage: (state, action) => {
             state.closeCarPage = action.payload;
+        }, setSales: (state, action) => {
+            state.sales = action.payload;
         },
     }
 })
 
-export const { setcloseCarPage } = configure.actions
+export const { setcloseCarPage,setSales } = configure.actions
 
 export default configure.reducer

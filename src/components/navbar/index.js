@@ -5,8 +5,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { useDispatch } from 'react-redux';
 
-import { setcloseCarPage } from '../configure/configure';
-import SalesScreen from '../car/salesScreen';
+import { setcloseCarPage, setSales } from '../configure/configure';
+
 import './index.css';
 
 function NavbarHyundai({ selectedCar, navigate }) {
@@ -15,7 +15,6 @@ function NavbarHyundai({ selectedCar, navigate }) {
   const [active, setActive] = useState(false);
   const [activeAbout, setActiveAbout] = useState(false)
   const dropdownRef = useRef(null);
-  const [sales,setSales] = useState(false)
 
   const dispatch = useDispatch();
 
@@ -49,6 +48,11 @@ function NavbarHyundai({ selectedCar, navigate }) {
 
   const openAbout = () => {
     setActiveAbout(true)
+  }
+
+  const salesActive = () =>{
+    setSales(true)
+    navigate('/salesScreen')
   }
 
   return (
@@ -85,7 +89,7 @@ function NavbarHyundai({ selectedCar, navigate }) {
                   <div className="dropdown-item-about">Özellik 3</div>
                 </div>
               }
-              <Nav.Link href="#pricing">Yetkili Satıcı ve Servis</Nav.Link>
+              <Nav.Link onClick={salesActive}>Yetkili Satıcı ve Servis</Nav.Link>
             </div>
           </Nav>
         </Container>
