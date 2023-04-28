@@ -48,6 +48,9 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
         <Helmet>
           <title> Hyundai </title>
         </Helmet>
+        {
+          sales && <SalesScreen />
+        }
         {closeCarPage &&
           <div className='sliderPage' >
             <div className='sliderBar' >
@@ -68,9 +71,6 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
               <p>Daha Fazla Bilgi için</p>
               <button onClick={goToDetail}>Devam et</button>
             </div>
-            {
-              sales && <SalesScreen />
-            }""
             <div className='suvPacket'>
               <h4 className='suvh4' >Hyundai SUV Ailesi</h4>
               <div className='galleryContainer'>
@@ -132,7 +132,8 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
           <Carousel />
         }
       </div>
-      {!closeCarPage && <Detail setcloseCarPage={setcloseCarPage} />}
+      {!closeCarPage && sales === false && <Detail setcloseCarPage={setcloseCarPage} />}
+
     </>
   );
 }

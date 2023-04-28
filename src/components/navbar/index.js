@@ -51,8 +51,9 @@ function NavbarHyundai({ selectedCar, navigate }) {
   }
 
   const salesActive = () =>{
-    setSales(true)
+    dispatch(setSales(true))
     navigate('/salesScreen')
+    dispatch(setcloseCarPage(false))
   }
 
   return (
