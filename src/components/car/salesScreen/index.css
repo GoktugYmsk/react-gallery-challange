@@ -20,7 +20,8 @@
     height: 200px;
 }
 
-.salesAltPhoto img {
+.salesAltPhoto>img {
+    position: absolute;
     width: 30px;
     height: 60px;
     object-fit: cover;
@@ -85,4 +86,8 @@
     width: 130px;
     height: 60px;
     border-radius: 50%;
+}
+
+.picture3P {
+    line-height: 1.5;
 }

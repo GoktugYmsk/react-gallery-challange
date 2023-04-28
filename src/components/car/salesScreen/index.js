@@ -41,7 +41,7 @@ function SalesScreen() {
         </div>
         <div className='picture3' >
           <img src={image4} />
-          <p><span>Elektrikli Otomobil Yetkili Satıcı ve Servis</span></p>
+          <p className='picture3P' ><span>Elektrikli Otomobil Yetkili Satıcı ve Servis</span></p>
         </div>
       </div>
       <div className='mainDirect' >

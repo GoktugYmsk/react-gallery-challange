@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { FaPause } from 'react-icons/fa';
 import './index.css'
 
 function Slider() {
   const warningMessage = 'https://www.hyundai.com/content/dam/hyundai/tr/tr/images/home/2023/deprem-1860x720-v2.jpg';
-
+  const [selectedCircle, setSelectedCircle] = useState(0);
   return (
     <div className="carousel-container">
       <Carousel interval={5000}>
@@ -70,8 +71,8 @@ function Slider() {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <h3>Hyundai Vision 23.sayı</h3>
-          <button>Yeni sayımızı okumak için tıklayınız</button>
+          <h3 className='carouselH3' >Hyundai Vision 23.sayı</h3>
+          <button className='caoruselH3Button' >Yeni sayımızı okumak için tıklayınız</button>
           <img
             className="d-block w-100"
             src="https://www.hyundai.com/content/dam/hyundai/tr/tr/images/home/2023/vision23-kapak-1860x720.jpg"
@@ -84,6 +85,16 @@ function Slider() {
           />
         </Carousel.Item>
       </Carousel>
+      <div className="carouselOption">
+  {[...Array(6)].map((_, i) => (
+    <div
+      key={i}
+      className={`circleCarousel ${selectedCircle === i ? 'selectedCircleOption' : ''}`}
+      onClick={() => setSelectedCircle(i)}
+    />
+  ))}
+</div>
+
     </div>
   );
 }
