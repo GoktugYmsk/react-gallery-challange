@@ -42,11 +42,24 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
     return selectedCar.image;
   };
 
+  setInterval(() => {
+    const changeTittle = 'Sizin için buradayız'
+    document.title = changeTittle
+  }, 3000);
+  setInterval(() => {
+    const changeTittle = 'Hyundai'
+    document.title = changeTittle
+  }, 6000);
+  setInterval(() => {
+    const changeTittle = 'Hyundai Yetkili Servis'
+    document.title = changeTittle
+  }, 9000);
+
   return (
     <>
       <div className={`carContainer ${selectedCar ? 'selected' : ''}`}>
         <Helmet>
-          <title> Hyundai </title>
+          <title> Hyundai </title> 
         </Helmet>
         {
           sales && <SalesScreen />
