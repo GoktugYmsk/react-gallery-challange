@@ -70,6 +70,12 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
               <Slider list={list} />
             </div>
           </div>}
+          <div className='carouselAltInfo' >
+            <li>Fiyat Listesi</li>
+            <li>Ayın Özel Teklifleri</li>
+            <li>Test Sürüşü</li>
+            <li>Online Showroom</li>
+          </div>
         {closeCarPage && (
           <div className='carInfoPage' >
             <div className="carList">

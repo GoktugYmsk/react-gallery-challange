@@ -260,6 +260,29 @@
   margin-top: 400px;
 }
 
+.rightClick .buttonActive {
+  background: red;
+}
+
+.carouselAltInfo {
+  display: flex;
+  position: relative;
+  bottom: 160px;
+  margin-left: 440px;
+}
+
+.carouselAltInfo>li {
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.carouselAltInfo>li:hover{
+  text-decoration: underline;
+}
+
+
 /*  Küçük ekranlar için */
 @media (min-width: 768px) {
   .sliderPage {
@@ -464,8 +487,4 @@
   .circle {
     margin: 0 5px;
   }
-}
-
-.rightClick .buttonActive {
-  background: red;
 }
