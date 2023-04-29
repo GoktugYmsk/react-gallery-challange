@@ -34,13 +34,31 @@ function App() {
   return (
     <div className="App">
       <NavbarHyundai selectedCar={selectedCar} navigate={navigate} />
-      <div className='rightBar' >
-        <div className='rightBarIcons' ><RiSteering2Line style={{ background: ' rgb(31, 126, 186)' }} /></div>
-        <div className='rightBarIcons'><AiFillCar style={{ background: ' rgb(31, 126, 186)' }} /> </div>
-        <div className='rightBarIcons'><GiScrewdriver style={{ background: ' rgb(31, 126, 186)' }} /></div>
-        <div className='rightBarIcons'><MdDesignServices style={{ background: ' rgb(31, 126, 186)' }} /></div>
-        <div className='rightBarIcons'><GiReceiveMoney style={{ background: ' rgb(31, 126, 186)' }} /></div>
-        <div className='rightBarIcons'><RiPictureInPictureExitLine style={{ background: ' rgb(31, 126, 186)' }} /></div>
+      <div className='rightBar'>
+        <div className='rightBarIcons'>
+          <RiSteering2Line style={{ background: ' rgb(31, 126, 186)' }} />
+          <span className='iconText'>Test Sürüşü</span>
+        </div>
+        <div className='rightBarIcons'>
+          <AiFillCar style={{ background: ' rgb(31, 126, 186)' }} />
+          <span className='iconText'>Hyundai Kredi</span>
+        </div>
+        <div className='rightBarIcons'>
+          <GiScrewdriver style={{ background: ' rgb(31, 126, 186)' }} />
+          <span className='iconText'>Servis Randevusu</span>
+        </div>
+        <div className='rightBarIcons'>
+          <MdDesignServices style={{ background: ' rgb(31, 126, 186)' }} />
+          <span className='iconText'>Hyundai'nizi Oluşturun</span>
+        </div>
+        <div className='rightBarIcons'>
+          <GiReceiveMoney style={{ background: ' rgb(31, 126, 186)' }} />
+          <span className='iconText'>Fiyat Listesi</span>
+        </div>
+        <div className='rightBarIcons'>
+          <RiPictureInPictureExitLine style={{ background: ' rgb(31, 126, 186)' }} />
+          <span className='iconText'>Online Showroom</span>
+        </div>
       </div>
       <div className='hyundaiCar' >
         <Car selectedCar={selectedCar} setSelectedCar={setSelectedCar} list={list} handleCarClick={handleCarClick} navigate={navigate} />
