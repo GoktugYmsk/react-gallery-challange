@@ -8,7 +8,7 @@ import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 import Detail from '../detailPopup';
 import Popup from '../popup';
 import Slider from '../slider'
-import { setcloseCarPage } from '../configure/configure';
+import { setcloseCarPage, setRightBar } from '../configure/configure';
 import { imageData } from '../../assets/data';
 import Carousel from './carouselFooter';
 import SalesScreen from './salesScreen';
@@ -19,13 +19,16 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
   const [turn, setTurn] = useState(imageData)
   const dispatch = useDispatch()
   const [buttonActive, setButtonActive] = useState(true)
+  const [details, setDetails] = useState(false)
+
   const sales = useSelector((state) => state.componentControl.sales)
 
-
   const closeCarPage = useSelector((state) => state.componentControl.closeCarPage)
+  
   const goToDetail = () => {
     dispatch(setcloseCarPage(false))
     navigate('/Detail-Page');
+    dispatch(setRightBar(false))
   };
 
   const handlePrevClick = () => {
@@ -41,6 +44,10 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
     const selectedCar = list.find((car) => car.id === carId);
     return selectedCar.image;
   };
+
+  const careClick = () => {
+    dispatch(setcloseCarPage(false))
+  }
 
   setInterval(() => {
     const changeTittle = 'Sizin için buradayız'
@@ -59,7 +66,7 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
     <>
       <div className={`carContainer ${selectedCar ? 'selected' : ''}`}>
         <Helmet>
-          <title> Hyundai </title> 
+          <title> Hyundai </title>
         </Helmet>
         {
           sales && <SalesScreen />
@@ -70,12 +77,12 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
               <Slider list={list} />
             </div>
           </div>}
-          <div className='carouselAltInfo' >
-            <li>Fiyat Listesi</li>
-            <li>Ayın Özel Teklifleri</li>
-            <li>Test Sürüşü</li>
-            <li>Online Showroom</li>
-          </div>
+        <div className='carouselAltInfo' >
+          <li>Fiyat Listesi</li>
+          <li>Ayın Özel Teklifleri</li>
+          <li>Test Sürüşü</li>
+          <li>Online Showroom</li>
+        </div>
         {closeCarPage && (
           <div className='carInfoPage' >
             <div className="carList">
@@ -141,9 +148,14 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
               <div className='carCarePage' >
                 <h3 className='careHeader' >Bakım</h3>
                 <p className='careInfo' >Araç Bakımı neden düzenli yaptırılmalı?</p>
-                <button className='careInfoButton' >
-                  <a href=''>Detaylar</a>
+                <button onClick={careClick} className='careInfoButton' >
+                  Detaylar
                 </button>
+                {details &&
+                  <div className='careDetailsPage' >
+                    selam herkese
+                  </div>
+                }
               </div>
             </div>
           </div>}

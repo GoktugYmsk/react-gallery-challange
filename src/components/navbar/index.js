@@ -27,11 +27,6 @@ function NavbarHyundai({ selectedCar, navigate }) {
   const openDropdown = () => {
     setActive(true);
   };
-
-  const closeDropdown = () => {
-    setActive(false);
-  };
-
   useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
 
@@ -51,7 +46,7 @@ function NavbarHyundai({ selectedCar, navigate }) {
     setActiveAbout(true)
   }
 
-  const salesActive = () =>{
+  const salesActive = () => {
     dispatch(setSales(true))
     navigate('/salesScreen')
     dispatch(setcloseCarPage(false))
@@ -96,7 +91,6 @@ function NavbarHyundai({ selectedCar, navigate }) {
           </Nav>
         </Container>
       </Navbar>
-
     </>
   );
 }

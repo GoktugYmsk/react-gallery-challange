@@ -20,7 +20,8 @@
     height: 60px;
     background-color: #002c5f !important;
 }
-.caoruselH3Button:hover{
+
+.caoruselH3Button:hover {
     text-decoration: underline;
 }
 
@@ -45,6 +46,11 @@
 
 .circleCarousel.selectedCircleOption {
     background-color: blue;
+}
+
+.caoruselH3Button>a {
+    text-decoration: none;
+    color: white;
 }
 
 

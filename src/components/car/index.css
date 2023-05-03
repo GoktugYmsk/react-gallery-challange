@@ -132,12 +132,12 @@
   font-weight: 600;
 }
 
-.careInfoButton>a {
+.careInfoButton {
   text-decoration: none;
   color: white;
 }
 
-.careInfoButton>a:hover {
+.careInfoButton:hover {
   text-decoration: underline;
 }
 
@@ -268,11 +268,11 @@
   display: flex;
   position: relative;
   bottom: 160px;
-  margin-left: 440px;
+  margin-left: 350px;
 }
 
 .carouselAltInfo>li {
-  margin-left: 20px;
+  margin-left: 60px;
   font-size: 20px;
   font-weight: 600;
   cursor: pointer;

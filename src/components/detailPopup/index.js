@@ -3,19 +3,19 @@ import { Helmet } from 'react-helmet';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { productList } from '../../assets/data';
-import { setcloseCarPage } from '../configure/configure';
+import { setRightBar } from '../configure/configure';
 import './index.css';
 
 function Detail({ setcloseCarPage }) {
   const [vehicle, setVehicle] = useState(productList);
 
   const navigate = useNavigate();
-
   const dispatch = useDispatch()
 
   const comeBackMainPage = () => {
     navigate('/Hyundai');
     dispatch(setcloseCarPage(true))
+    dispatch(setRightBar(true))
   };
 
   return (

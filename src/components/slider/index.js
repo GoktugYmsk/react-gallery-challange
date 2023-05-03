@@ -82,7 +82,10 @@ function Slider() {
             }}
           />
           <h3 className='carouselH3' >Hyundai Vision 23.sayı</h3>
-          <button className='caoruselH3Button' >Yeni sayımızı okumak <br/> için tıklayınız</button>
+
+          <button className='caoruselH3Button' >
+            <a target='_blank' href='https://vision.social-hyundai.com/vision-dergisi/page/1'>Yeni sayımızı okumak <br /> için tıklayınız</a>
+          </button>
         </Carousel.Item>
       </Carousel>
       {/*

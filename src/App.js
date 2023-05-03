@@ -15,7 +15,6 @@ import './App.css';
 
 function App() {
   const [list, setList] = useState(initialData);
-  const [deneme, setDeneme] = useState(productList)
   const [selectedCar, setSelectedCar] = useState(false);
   const navigate = useNavigate();
 
@@ -27,10 +26,12 @@ function App() {
     navigate(`/Hyundai-${selectedCar.title}`);
   }
 
+  const rightBar = useSelector((state) => state.componentControl.rightBar)
+
   return (
     <div className="App">
       <NavbarHyundai selectedCar={selectedCar} navigate={navigate} />
-      <RightBar/>
+      {rightBar && <RightBar />}
       <div className='hyundaiCar' >
         <Car selectedCar={selectedCar} setSelectedCar={setSelectedCar} list={list} handleCarClick={handleCarClick} navigate={navigate} />
       </div>
