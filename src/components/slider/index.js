@@ -6,7 +6,6 @@ import './index.css'
 
 function Slider() {
   const warningMessage = 'https://www.hyundai.com/content/dam/hyundai/tr/tr/images/home/2023/deprem-1860x720-v2.jpg';
-  const [selectedCircle, setSelectedCircle] = useState(0);
   return (
     <div className="carousel-container">
       <Carousel interval={5000}>

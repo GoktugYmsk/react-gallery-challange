@@ -153,7 +153,7 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
                 </button>
                 {details &&
                   <div className='careDetailsPage' >
-                    selam herkese
+                    careDetailsPage
                   </div>
                 }
               </div>

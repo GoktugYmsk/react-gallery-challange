@@ -18,7 +18,6 @@
 .carContainer {
   position: relative;
   margin-top: 200px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   height: 100%;
 }
 
@@ -278,17 +277,62 @@
   cursor: pointer;
 }
 
-.carouselAltInfo>li:hover{
+.carouselAltInfo>li:hover {
   text-decoration: underline;
 }
 
 
 @media (max-width: 500px) {
   .carContainer {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footerPhoto {
+    position: relative;
+    width: 3000px;
+    border-style: none;
+    box-shadow: none;
+    object-fit: cover;
+    height: auto;
+  }
+
+  .careHeader {
+    margin-left: 600px;
+  }
+
+  .careInfo {
+    margin-left: 600px;
+  }
+
+  .careInfoButton {
+    margin-left: 600px;
+  }
+
+  .detailPageObject {
+    position: relative;
+    left: 200px;
+  }
+
+  .suvh4 {
+    position: relative;
+    left: 200px;
+  }
+
+  .galleryWrapper{
+    width: 100%;
+
+  }
+
+  .galleryMod{
+    position: relative;
+    left: 200px;
+  }
+  .firstPage img{
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
   }
 }

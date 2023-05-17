@@ -102,3 +102,19 @@
 .page.active {
     background-color: #0070f3;
 }
+
+
+
+@media (max-width: 500px) {
+    .pageCarousel {
+        margin-left: 500px;
+    }
+    .carouselNext{
+        position: relative;
+        right: 220px;
+    }
+    .carouselPrew{
+        position: relative;
+        left: 620px;
+    }
+}
