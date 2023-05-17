@@ -63,29 +63,20 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 /*  media mod  */
 
-@media only screen and (max-width: 767px) {
-  .footerSide {
-    padding: 20px;
-  }
+@media  (max-width: 500px) {
 
-  .footerPhotoSide {
-    display: none;
+  .footerSide{
+    width: 1200px;
+  }
+  .footerPhotoSide{
+    width: 960px;
+    object-fit: cover;
   }
 
   .footer-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-left,
-  .footer-right {
-    width: 100%;
-    text-align: center;
-  }
-
-  .footer-right {
-    margin-top: 20px;
+    width: 1200px;
   }
 }

@@ -59,7 +59,12 @@
 
 
 @media (max-width: 500px) {
-  .App {
+
+  .App{
+  }
+
+  .onlineSupport{
+    display: none;
   }
 
 }

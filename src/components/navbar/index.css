@@ -119,20 +119,20 @@
 
 
 @media (max-width: 500px) {
+    .navbar{
+        position: relative;
+        width: 1200px;
+    }
     .navbarContainer {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
         align-items: center;
-        width: 100vh;
+        width: 100%;
     }
 
     .navbarLogo{
         margin-top: 30px;
         margin-left: 20px;
-    }
-
-    .navlinkPart{
-        background: rgb(20, 78, 154);
     }
 }

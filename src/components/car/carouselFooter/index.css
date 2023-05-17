@@ -106,15 +106,31 @@
 
 
 @media (max-width: 500px) {
-    .pageCarousel {
-        margin-left: 500px;
+    .carouselFooterPage {
+        display: none;
+        margin-top: 800px;
+        width: 100px;
+        padding-bottom: 400px;
+        margin-left: 100px;
     }
-    .carouselNext{
+
+
+    .carouselNext {
         position: relative;
-        right: 220px;
     }
-    .carouselPrew{
+
+    .carouselPrew {
         position: relative;
-        left: 620px;
+        left: 500px;
     }
+
+    .carouselAddButton {
+        margin-top: 200px;
+    }
+
+    .carouselInspectButton {
+        margin-top: 200px;
+
+    }
+    
 }

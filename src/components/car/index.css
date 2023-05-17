@@ -288,23 +288,29 @@
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
 
   .footerPhoto {
     position: relative;
-    width: 3000px;
     border-style: none;
-    box-shadow: none;
     object-fit: cover;
     height: auto;
+    width: 1905px;
   }
 
   .careHeader {
     margin-left: 600px;
   }
-
-  .careInfo {
+  .careInfo{
     margin-left: 600px;
+  }
+
+  .imageCar{
+    width: 420px;
+    height: 300px;
+    object-fit: cover;
+    margin-left: 60px;
   }
 
   .careInfoButton {
@@ -312,27 +318,42 @@
   }
 
   .detailPageObject {
-    position: relative;
-    left: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
-  .suvh4 {
-    position: relative;
-    left: 200px;
+  .suvPacket {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 120px;
+    margin-left: 120px;
   }
 
-  .galleryWrapper{
+  .galleryWrapper {
     width: 100%;
 
   }
 
-  .galleryMod{
+  .galleryMod {
     position: relative;
     left: 200px;
   }
-  .firstPage img{
+
+  .firstPage img {
     width: 200px;
     height: 100px;
     object-fit: cover;
+  }
+
+  .carouselAltInfo {
+    display: none;
+  }
+
+  .carDetails{
+    margin-right: 460px;
   }
 }
