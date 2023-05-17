@@ -39,7 +39,3 @@
   width: 400px;
   right: 300px !important;
 }
-
-.rightBarIcons:hover .iconText {
-  display: flex;
-}

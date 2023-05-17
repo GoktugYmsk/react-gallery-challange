@@ -6,7 +6,6 @@ import { BiMessageDetail } from 'react-icons/bi';
 
 
 import { initialData } from './assets/data';
-import { productList } from './assets/data';
 import RightBar from './components/rightBar';
 import NavbarHyundai from './components/navbar';
 import Car from './components/car';

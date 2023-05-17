@@ -116,3 +116,23 @@
         background-color: #212529;
     }
 }
+
+
+@media (max-width: 500px) {
+    .navbarContainer {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        width: 100vh;
+    }
+
+    .navbarLogo{
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+
+    .navlinkPart{
+        background: rgb(20, 78, 154);
+    }
+}
