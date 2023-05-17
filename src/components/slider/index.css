@@ -53,27 +53,3 @@
     color: white;
 }
 
-
-/*  media mod  */
-
-@media (max-width: 500px) {
-    .carousel-container {
-        display: flex;
-        width: 100%;
-        object-fit: cover;
-    }
-
-    .imageCaorusel{
-        display: flex;
-        position: relative;
-        height: 400px;
-        width: 600px;
-        left: 100px;
-        object-fit: cover;
-    }
-
-    .sliderPage{
-        display: none;
-    }
-
-}

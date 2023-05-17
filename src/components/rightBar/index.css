@@ -39,12 +39,3 @@
   width: 400px;
   right: 300px !important;
 }
-
-
-@media (max-width: 500px) {
-  .rightBar {
-    display: none;
-    position: fixed;
-    right: 0;
-  }
-}

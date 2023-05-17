@@ -63,20 +63,3 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-/*  media mod  */
-
-@media  (max-width: 500px) {
-
-  .footerSide{
-    width: 1200px;
-  }
-  .footerPhotoSide{
-    width: 960px;
-    object-fit: cover;
-  }
-
-  .footer-container {
-    width: 1200px;
-  }
-}

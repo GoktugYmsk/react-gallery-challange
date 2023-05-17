@@ -63,7 +63,7 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
   }, 12000);
 
   return (
-    <>
+    <> 
       <div className={`carContainer ${selectedCar ? 'selected' : ''}`}>
         <Helmet>
           <title> Hyundai </title>
@@ -83,21 +83,24 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
           <li>Test Sürüşü</li>
           <li>Online Showroom</li>
         </div>
+        
         {closeCarPage && (
           <div className='carInfoPage' >
-            <div className="carList">
+            <div className='row' >
+            <div className="col-4 carList">
               {list.map(car => (
                 <div className="car" key={car.id} onClick={() => handleCarClick(car.id)}>
                   <h3 className='carName'>{car.title}</h3>
                   <img onClick={() => handleCarClick(car.id)} className='imageCar' src={getCarImage(car.id)} alt={`Image of ${car.title}`} />
                 </div>
               ))}
-            </div>
-            <div className='detailPageObject' >
+              </div>
+              </div>
+            <div className='detailPageObject col-12' >
               <p>Daha Fazla Bilgi için</p>
               <button onClick={goToDetail}>Devam et</button>
             </div>
-            <div className='suvPacket'>
+            <div className='suvPacket col-12'>
               <h4 className='suvh4' >Hyundai SUV Ailesi</h4>
               <div className='galleryContainer'>
                 <div className='galleryWrapper' >
@@ -142,7 +145,7 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
           </div>
         )}
         {closeCarPage &&
-          <div className='footerUstBar' >
+          <div className='footerUstBar col-sm-12' >
             <div className={`footerImage ${selectedCar ? 'selected' : ''}`}>
               <img className='footerPhoto' src='https://www.hyundai.com/content/dam/hyundai/template_en/en/images/home/home-big-banner-maintenance-grill-of-navy-car-pc.jpg' />
               <div className='carCarePage' >

@@ -103,34 +103,3 @@
     background-color: #0070f3;
 }
 
-
-
-@media (max-width: 500px) {
-    .carouselFooterPage {
-        display: none;
-        margin-top: 800px;
-        width: 100px;
-        padding-bottom: 400px;
-        margin-left: 100px;
-    }
-
-
-    .carouselNext {
-        position: relative;
-    }
-
-    .carouselPrew {
-        position: relative;
-        left: 500px;
-    }
-
-    .carouselAddButton {
-        margin-top: 200px;
-    }
-
-    .carouselInspectButton {
-        margin-top: 200px;
-
-    }
-    
-}
