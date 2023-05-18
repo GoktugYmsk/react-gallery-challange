@@ -96,11 +96,11 @@
     border-style: none;
     background: rgb(8, 94, 148);
     color: white;
-    width: 130px;
+    width: 130  px;
     height: 60px;
     border-radius: 50%;
 }
 
 .picture3P {
     line-height: 1.5;
-}
+} 
