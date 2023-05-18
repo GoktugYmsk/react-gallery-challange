@@ -103,3 +103,32 @@
     background-color: #0070f3;
 }
 
+
+
+
+@media screen and (max-width: 540px) {
+
+
+    .carouselAddButton {
+        margin-top: 120px;
+        width: 100px;
+        height: 50px;
+    }
+
+    .carouselInspectButton {
+        margin-top: 120px;
+        width: 100px;
+        height: 50px;
+    }
+
+    .carouselPrew {
+        position: relative;
+        left: 60px;
+    }
+
+    .carouselNext {
+        position: relative;
+        right: 60px;
+        margin-right: 160px;
+    }
+}

@@ -281,3 +281,44 @@
   text-decoration: underline;
 }
 
+
+
+
+
+@media screen and (max-width: 540px) {
+  .detailPageObject {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    right: 520px;
+  }
+
+  .imageCar {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: none;
+    grid-template-rows: none;
+  }
+
+  .carouselAltInfo {
+    position: relative;
+    right: 400px;
+  }
+
+  .sliderBar {
+    display: none;
+  }
+
+  .carouselAltInfo {
+    margin-right: 800px;
+  }
+
+  .suvh4 {
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    right: 320px;
+  }
+}

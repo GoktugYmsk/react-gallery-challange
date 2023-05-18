@@ -41,28 +41,30 @@ function Carousel() {
   };
 
   return (
-    <div className="carouselFooterPage">
-      <button className='carouselPrew' onClick={prev}>&lt;</button>
-      <div className="pageCarousel">
-        <h3>{pages[currentPage].title}</h3>
-        <br />
-        <p>{pages[currentPage].date}</p>
-        <br />
-        <h5>{pages[currentPage].content}</h5>
-        <div className='buttonControl' >
-          <button className='carouselAddButton' >Daha Fazla Yükle</button>
-          <button className='carouselInspectButton' >İncele</button>
+    <div className='row' >
+      <div className=" col-12 carouselFooterPage">
+        <button className='carouselPrew' onClick={prev}>&lt;</button>
+        <div className="pageCarousel">
+          <h3>{pages[currentPage].title}</h3>
+          <br />
+          <p>{pages[currentPage].date}</p>
+          <br />
+          <h5>{pages[currentPage].content}</h5>
+          <div className='buttonControl' >
+            <button className='carouselAddButton' >Daha Fazla Yükle</button>
+            <button className='carouselInspectButton' >İncele</button>
+          </div>
         </div>
-      </div>
-      <button className='carouselNext' onClick={next}>&gt;</button>
-      <div className="pagination">
-        {pages.map((_, index) => (
-          <div
-            key={index}
-            className={`page ${currentPage === index ? "active" : ""}`}
-            onClick={() => setCurrentPage(index)}
-          />
-        ))}
+        <button className='carouselNext' onClick={next}>&gt;</button>
+        <div className="pagination">
+          {pages.map((_, index) => (
+            <div
+              key={index}
+              className={`page ${currentPage === index ? "active" : ""}`}
+              onClick={() => setCurrentPage(index)}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

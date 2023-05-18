@@ -24,7 +24,7 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
   const sales = useSelector((state) => state.componentControl.sales)
 
   const closeCarPage = useSelector((state) => state.componentControl.closeCarPage)
-  
+
   const goToDetail = () => {
     dispatch(setcloseCarPage(false))
     navigate('/Detail-Page');
@@ -63,7 +63,7 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
   }, 12000);
 
   return (
-    <> 
+    <>
       <div className={`carContainer ${selectedCar ? 'selected' : ''}`}>
         <Helmet>
           <title> Hyundai </title>
@@ -77,63 +77,68 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
               <Slider list={list} />
             </div>
           </div>}
-        <div className='carouselAltInfo' >
-          <li>Fiyat Listesi</li>
-          <li>Ayın Özel Teklifleri</li>
-          <li>Test Sürüşü</li>
-          <li>Online Showroom</li>
+        <div className='row' >
+          <div className='col-12 carouselAltInfo ' >
+            <li>Fiyat Listesi</li>
+            <li>Ayın Özel Teklifleri</li>
+            <li>Test Sürüşü</li>
+            <li>Online Showroom</li>
+          </div>
         </div>
-        
         {closeCarPage && (
           <div className='carInfoPage' >
             <div className='row' >
-            <div className="col-4 carList">
-              {list.map(car => (
-                <div className="car" key={car.id} onClick={() => handleCarClick(car.id)}>
-                  <h3 className='carName'>{car.title}</h3>
-                  <img onClick={() => handleCarClick(car.id)} className='imageCar' src={getCarImage(car.id)} alt={`Image of ${car.title}`} />
-                </div>
-              ))}
+              <div className="col-12 carList">
+                {list.map(car => (
+                  <div className="car" key={car.id} onClick={() => handleCarClick(car.id)}>
+                    <h3 className='carName'>{car.title}</h3>
+                    <img onClick={() => handleCarClick(car.id)} className='imageCar' src={getCarImage(car.id)} alt={`Image of ${car.title}`} />
+                  </div>
+                ))}
               </div>
-              </div>
-            <div className='detailPageObject col-12' >
-              <p>Daha Fazla Bilgi için</p>
-              <button onClick={goToDetail}>Devam et</button>
             </div>
-            <div className='suvPacket col-12'>
-              <h4 className='suvh4' >Hyundai SUV Ailesi</h4>
-              <div className='galleryContainer'>
-                <div className='galleryWrapper' >
-                  {turn.map((picture, index) => (
-                    <div className='galleryMod' key={index}>
-                      {optionPage &&
-                        <div className='firstPage' >
-                          <img src={picture.bayon} alt='bayon' />
-                          <img src={picture.iconic} alt='iconic' />
-                          <img src={picture.kona} alt='kona' />
-                          <img src={picture.konaElectric} alt='kona electric' />
-                        </div>
-                      }
-                      {!optionPage &&
-                        <div className='secondPage' >
-                          <img src={picture.santafe} alt='santafe' />
-                          <img src={picture.tucson} alt='tucson' />
-                        </div>
-                      }
-                    </div>
-                  ))}
-                </div>
-                <div className='galleryMod-controls'>
-                  <button className={`rightClick ${buttonActive ? 'buttonActive' : ''}`} onClick={handleNextClick}>
-                    <FaChevronRight />
-                  </button>
-                  <button className='leftClick' onClick={handlePrevClick} >
-                    <FaChevronLeft />
-                  </button>
-                </div>
-                <div className='actionCircle' >
-                  <div onClick={handlePrevClick} className={`circle ${optionPage ? "buttonactive" : ""}`} ></div>
-                  <div onClick={handleNextClick} className={`circle ${!optionPage ? "buttonactive" : ""}`} ></div>
+            <div className='row' >
+              <div className='detailPageObject col-12' >
+                <p>Daha Fazla Bilgi için</p>
+                <button onClick={goToDetail}>Devam et</button>
+              </div>
+            </div>
+            <div className='row' >
+              <div className='suvPacket col-12'>
+                <h4 className='suvh4' >Hyundai SUV Ailesi</h4>
+                <div className='galleryContainer'>
+                  <div className='galleryWrapper' >
+                    {turn.map((picture, index) => (
+                      <div className='galleryMod' key={index}>
+                        {optionPage &&
+                          <div className='firstPage' >
+                            <img src={picture.bayon} alt='bayon' />
+                            <img src={picture.iconic} alt='iconic' />
+                            <img src={picture.kona} alt='kona' />
+                            <img src={picture.konaElectric} alt='kona electric' />
+                          </div>
+                        }
+                        {!optionPage &&
+                          <div className='secondPage' >
+                            <img src={picture.santafe} alt='santafe' />
+                            <img src={picture.tucson} alt='tucson' />
+                          </div>
+                        }
+                      </div>
+                    ))}
+                  </div>
+                  <div className='galleryMod-controls'>
+                    <button className={`rightClick ${buttonActive ? 'buttonActive' : ''}`} onClick={handleNextClick}>
+                      <FaChevronRight />
+                    </button>
+                    <button className='leftClick' onClick={handlePrevClick} >
+                      <FaChevronLeft />
+                    </button>
+                  </div>
+                  <div className='actionCircle' >
+                    <div onClick={handlePrevClick} className={`circle ${optionPage ? "buttonactive" : ""}`} ></div>
+                    <div onClick={handleNextClick} className={`circle ${!optionPage ? "buttonactive" : ""}`} ></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -145,7 +150,7 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
           </div>
         )}
         {closeCarPage &&
-          <div className='footerUstBar col-sm-12' >
+          <div className='footerUstBar col-12' >
             <div className={`footerImage ${selectedCar ? 'selected' : ''}`}>
               <img className='footerPhoto' src='https://www.hyundai.com/content/dam/hyundai/template_en/en/images/home/home-big-banner-maintenance-grill-of-navy-car-pc.jpg' />
               <div className='carCarePage' >
@@ -167,7 +172,16 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
         }
       </div>
       {!closeCarPage && sales === false && <Detail setcloseCarPage={setcloseCarPage} />}
+      {/*********************************************** */}
+      {/*********************************************** */}
+      {/*********************************************** */}
+      {/*********************************************** */}
+      {/*********************************************** */}
 
+      <div className='row' >
+        <div className='col-8 yellow' >yellow</div>
+        <div className='col-4 red' >red</div>
+      </div>
     </>
   );
 }
