@@ -1,4 +1,4 @@
-.modul{
+.modul {
     position: fixed;
     width: 900px;
     height: auto;
@@ -9,7 +9,8 @@
     background: rgb(8, 94, 148);
     color: white;
 }
-.closePopup{
+
+.closePopup {
     border-style: none;
     width: 100px;
     height: 40px;
@@ -20,10 +21,12 @@
     margin-left: 750px;
     border-radius: 20px;
 }
-.closePopup:hover{
+
+.closePopup:hover {
     background: rgb(66, 130, 219);
 }
-.popupİmage{
+
+.popupİmage {
     height: 200px;
     width: 35%;
     object-fit: cover;
@@ -32,5 +35,38 @@
 }
 
 @media screen and (max-width: 540px) {
+    .modul {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-direction: column;
+        position: fixed;
+        width: 400px;
+        height: 650px;
+        right: 50px;
+        bottom: 20px;
+    }
+
+    .modul p {
+        display: inline-block !important;
+        color: white;
+        font-size: 10px;
+    }
+
+    .modul img {
+        display: inline-block;
+        position: relative;
+        margin-bottom: 40px;
+        width: 200px;
+        height: auto;
+    }
+
+    .closePopup {
+        display: inline-block !important;
+        position: relative;
+        bottom: 20px !important;
+        right: 250px !important;
+        width: 100px;
+    }
 
 }

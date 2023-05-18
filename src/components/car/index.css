@@ -385,4 +385,7 @@
     object-fit: cover;
   }
 
+  .carDetails {
+    background: red;
+  }
 }
