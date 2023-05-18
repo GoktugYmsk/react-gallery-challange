@@ -74,13 +74,23 @@
     width: 200px;
     opacity: 0.8;
 }
-.row{
+
+.row {
     width: 100%;
 }
-.yellow{
+
+.yellow {
     background: yellow;
     color: white;
 }
-.red{
+
+.red {
     background: red;
+}
+
+
+@media screen and (max-width: 540px) {
+    .navbar__main {
+        display: none;
+    }
 }

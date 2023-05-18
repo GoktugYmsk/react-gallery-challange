@@ -108,6 +108,12 @@
 
 @media screen and (max-width: 540px) {
 
+    .carouselFooterPage{
+        position: relative;
+        right: 150px;
+        background: red;
+        width: 481px;
+    }
 
     .carouselAddButton {
         margin-top: 120px;
@@ -123,12 +129,19 @@
 
     .carouselPrew {
         position: relative;
-        left: 60px;
+        left: 230px;
     }
 
     .carouselNext {
         position: relative;
-        right: 60px;
-        margin-right: 160px;
+        margin-right: 120px;
+    }
+    .pageCarousel{
+        position: relative;
+        left: 120px;
+    }
+    .pagination{
+        position: relative;
+        right: 350px;
     }
 }

@@ -292,7 +292,7 @@
     justify-content: center;
     flex-direction: column;
     position: relative;
-    right: 520px;
+    right: 630px;
   }
 
   .imageCar {
@@ -311,8 +311,12 @@
     display: none;
   }
 
-  .carouselAltInfo {
-    margin-right: 800px;
+  .carouselAltInfo li{
+    font-size: 14px;
+    
+  }
+  .carouselAltInfo{
+    margin-left: 380px;
   }
 
   .suvh4 {
@@ -321,4 +325,8 @@
     position: relative;
     right: 320px;
   }
+  .carInfoPage{
+    display: none;
+  }
+
 }

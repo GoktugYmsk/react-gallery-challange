@@ -86,8 +86,9 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
           </div>
         </div>
         {closeCarPage && (
+          <div className='row' >
           <div className='carInfoPage' >
-            <div className='row' >
+            
               <div className="col-12 carList">
                 {list.map(car => (
                   <div className="car" key={car.id} onClick={() => handleCarClick(car.id)}>
@@ -177,11 +178,6 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
       {/*********************************************** */}
       {/*********************************************** */}
       {/*********************************************** */}
-
-      <div className='row' >
-        <div className='col-8 yellow' >yellow</div>
-        <div className='col-4 red' >red</div>
-      </div>
     </>
   );
 }
