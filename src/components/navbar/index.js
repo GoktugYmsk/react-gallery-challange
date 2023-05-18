@@ -8,7 +8,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import { useDispatch } from 'react-redux';
 import { setcloseCarPage, setSales } from '../configure/configure';
 
-import './index.scss';
+import '../navbar/index.scss';
 
 function NavbarHyundai({ selectedCar, navigate }) {
   const imageLogo = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd_pHJvy-y5jCaMIjVnxuvlg_sCTlzKjRKSw&usqp=CAU';
