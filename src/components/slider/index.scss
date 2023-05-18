@@ -53,3 +53,29 @@
     color: white;
 }
 
+
+
+@media screen and (max-width: 540px) {
+
+    .carousel-container {
+        height: 100% !important;
+        width: 100% !important;
+
+
+        h3 {
+            display: none;
+        }
+
+        p {
+            display: none;
+        }
+    }
+
+    .imageCaorusel img {
+        width: 100vh !important;
+        height: 200px !important;
+        object-fit: cover !important;
+    }
+
+
+}

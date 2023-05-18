@@ -307,15 +307,12 @@
     right: 410px;
   }
 
-  .sliderBar {
-    display: none;
+  .carouselAltInfo li {
+    font-size: 14px;
+
   }
 
-  .carouselAltInfo li{
-    font-size: 14px;
-    
-  }
-  .carouselAltInfo{
+  .carouselAltInfo {
     margin-left: 380px;
   }
 
@@ -325,9 +322,44 @@
     position: relative;
     right: 320px;
   }
-  .carInfoPage{
-    display: none;
+
+  .sliderPage {
+    width: 100% !important;
+    padding: 40px;
+    padding-right: 80px;
+    height: 500px;
   }
-  
+
+  .sliderBar {
+    width: 100% !important;
+  }
+
+  .carList {
+    display: flex !important;
+    flex-direction: column !important;
+    margin-left: 10px !important;
+  }
+
+  .footerPhoto{
+    width: 100% !important;
+    height: 300px !important;
+    object-fit: cover;
+  }
+
+  .footerUstBar{
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .carCarePage{
+    margin-top: 160px;
+  }
+
+  .careInfoButton{
+
+    position: relative;
+    width: 100px;
+    height: 50px;
+    bottom: 20px;
+  }
 
 }
