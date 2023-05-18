@@ -292,7 +292,7 @@
     justify-content: center;
     flex-direction: column;
     position: relative;
-    right: 630px;
+    right: 660px;
   }
 
   .imageCar {
@@ -304,7 +304,7 @@
 
   .carouselAltInfo {
     position: relative;
-    right: 400px;
+    right: 410px;
   }
 
   .sliderBar {
@@ -328,5 +328,6 @@
   .carInfoPage{
     display: none;
   }
+  
 
 }

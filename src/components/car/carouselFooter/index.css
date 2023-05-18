@@ -111,8 +111,7 @@
     .carouselFooterPage{
         position: relative;
         right: 150px;
-        background: red;
-        width: 481px;
+        width: 430px;
     }
 
     .carouselAddButton {

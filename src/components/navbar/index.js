@@ -1,11 +1,14 @@
 import { useState, useEffect, useRef } from 'react';
+
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
 import { useDispatch } from 'react-redux';
 import { setcloseCarPage, setSales } from '../configure/configure';
 
-import './index.css';
+import './index.scss';
 
 function NavbarHyundai({ selectedCar, navigate }) {
   const imageLogo = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd_pHJvy-y5jCaMIjVnxuvlg_sCTlzKjRKSw&usqp=CAU';
@@ -19,10 +22,6 @@ function NavbarHyundai({ selectedCar, navigate }) {
     dispatch(setcloseCarPage(true));
     dispatch(setSales(false));
     navigate('/Hyundai');
-  };
-
-  const openDropdown = () => {
-    setActive(true);
   };
 
   useEffect(() => {
@@ -40,10 +39,6 @@ function NavbarHyundai({ selectedCar, navigate }) {
     }
   };
 
-  const openAbout = () => {
-    setActiveAbout(true);
-  };
-
   const salesActive = () => {
     dispatch(setSales(true));
     navigate('/salesScreen');
@@ -51,49 +46,36 @@ function NavbarHyundai({ selectedCar, navigate }) {
   };
 
   return (
-    <div className='row' >
-      <div className='col-12 navbar__main' >
-        <Navbar className={`navbar ${selectedCar ? 'selected' : ''}`} variant="dark">
-          <Container fluid>
-            <Navbar.Brand href="#home">
-              <img onClick={handleClick} className="navbarLogo" src={imageLogo} alt="Logo" />
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Collapse id="responsive-navbar-nav">
-              <Nav className="me-auto">
-                <Nav.Link href="#home">Modeller</Nav.Link>
-                <Nav.Link onClick={openDropdown} style={{ color: 'rgb(0, 170, 210)' }}>
-                  Entrikifasyon Teknolojisi
-                </Nav.Link>
-                {active && (
-                  <div ref={dropdownRef} className="dropdown">
-                    <div className="dropdown-item">Özellik 1</div>
-                    <div className="dropdown-item">Özellik 2</div>
-                    <div className="dropdown-item">Özellik 3</div>
-                  </div>
-                )}
-                <Nav.Link href="#features">Satış</Nav.Link>
-                <Nav.Link href="#pricing">Satış Sonrası</Nav.Link>
-                <Nav.Link onClick={openAbout} className="about" href="#pricing">
-                  Hakkımızda
-                </Nav.Link>
-                {activeAbout && (
-                  <div ref={dropdownRef} className="dropdown">
-                    <div className="dropdown-item-about">Özellik 1</div>
-                    <div className="dropdown-item-about">Özellik 2</div>
-                    <div className="dropdown-item-about">Özellik 3</div>
-                  </div>
-                )}
-                <Nav.Link onClick={salesActive} className="nav-link-mobile">
-                  Yetkili Satıcı ve Servis
-                </Nav.Link>
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar>
-      </div>
-    </div>
+    <Navbar className={`navbar ${selectedCar ? 'selected' : ''}`} variant="dark" expand="lg">
+      <Container>
+        <Navbar.Brand href="#home">
+        <img onClick={handleClick} className="navbarLogo" src={imageLogo} alt="Logo" />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link className='navbar__tag' href="#home">Modeller</Nav.Link>
+            <Nav.Link className='navbar__tag' href="#link">Satış</Nav.Link>
+            <Nav.Link className='navbar__tag' href="#link">Satış Sonrası</Nav.Link>
+            <Nav.Link className='navbar__tag' href="#link">Hakkımızda</Nav.Link>
+            <Nav.Link className='navbar__tag' href="#link">Yetkili Satıcı ve Servis</Nav.Link>
+            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+              <NavDropdown.Item className='navbar__tag' href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Another action
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 
 export default NavbarHyundai;
+
