@@ -19,6 +19,8 @@ function Detail({ setcloseCarPage }) {
   };
 
   return (
+    <div className='row' >
+      <div className='col-12' >
     <div className='detailContainer'>
       <Helmet>
         <title> Car Details </title>
@@ -54,6 +56,8 @@ function Detail({ setcloseCarPage }) {
         </div>
       ))}
       <button className='mainPageBackButton' onClick={comeBackMainPage}>Anasayfa</button>
+    </div>
+    </div>
     </div>
   );
 }

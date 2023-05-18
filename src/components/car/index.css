@@ -318,9 +318,9 @@
 
   .suvh4 {
     display: flex;
-    flex-wrap: nowrap;
+    white-space: nowrap;
     position: relative;
-    right: 320px;
+    right: 280px;
   }
 
   .sliderPage {
@@ -340,26 +340,49 @@
     margin-left: 10px !important;
   }
 
-  .footerPhoto{
+  .footerPhoto {
     width: 100% !important;
     height: 300px !important;
     object-fit: cover;
   }
 
-  .footerUstBar{
+  .footerUstBar {
     display: flex !important;
     flex-direction: column !important;
   }
-  .carCarePage{
+
+  .carCarePage {
     margin-top: 160px;
   }
 
-  .careInfoButton{
-
+  .careInfoButton {
     position: relative;
     width: 100px;
     height: 50px;
     bottom: 20px;
+  }
+
+  .suvPacket h4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 100px;
+  }
+
+  .galleryWrapper {
+    height: 220px !important;
+    background: red;
+  }
+
+  .galleryWrapper img {
+    display: flex;
+    position: relative;
+    right: 220px;
+    width: 200px !important;
+    height: auto;
+    object-fit: cover;
   }
 
 }

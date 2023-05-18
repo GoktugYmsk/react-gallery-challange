@@ -110,8 +110,8 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
                 <button onClick={goToDetail}>Devam et</button>
               </div>
             </div>
-            <div className='row' >
-              <div className='suvPacket col-12'>
+            <div className='row ' >
+              <div className='col-12 suvPacket '>
                 <h4 className='suvh4' >Hyundai SUV Ailesi</h4>
                 <div className='galleryContainer'>
                   <div className='galleryWrapper' >
@@ -152,13 +152,17 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
           </div>
         )}
         {selectedCar && (
-          <div className="carDetails">
-            <Popup selectedCar={selectedCar} setSelectedCar={setSelectedCar} />
+          <div className='row' >
+            <div className='col-12' >
+              <div className="carDetails">
+                <Popup selectedCar={selectedCar} setSelectedCar={setSelectedCar} />
+              </div>
+            </div>
           </div>
         )}
         {closeCarPage &&
-          <div className='row' >
-            <div className='footerUstBar col-12' >
+          <div className='row footer__container ' >
+            <div className='col-12 footerUstBar ' >
               <div className={`footerImage ${selectedCar ? 'selected' : ''}`}>
                 <img className='footerPhoto' src='https://www.hyundai.com/content/dam/hyundai/template_en/en/images/home/home-big-banner-maintenance-grill-of-navy-car-pc.jpg' />
                 <div className='carCarePage' >

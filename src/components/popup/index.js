@@ -12,11 +12,15 @@ function Popup({ selectedCar, setSelectedCar }) {
   }
 
   return (
-    <div className='modul'>
-      <img className='popupİmage' src={selectedCar.image} alt={`Image of ${selectedCar.title}`} />
-      <h2 className='selectedCarTitle'>{selectedCar.title}</h2>
-      <p>{selectedCar.content}</p>
-      <button onClick={closePopupModule} className='closePopup'>Çık</button>
+    <div className='row' >
+      <div className='col-12' >
+        <div className='modul'>
+          <img className='popupİmage' src={selectedCar.image} alt={`Image of ${selectedCar.title}`} />
+          <h2 className='selectedCarTitle'>{selectedCar.title}</h2>
+          <p>{selectedCar.content}</p>
+          <button onClick={closePopupModule} className='closePopup'>Çık</button>
+        </div>
+      </div>
     </div>
   )
 }
