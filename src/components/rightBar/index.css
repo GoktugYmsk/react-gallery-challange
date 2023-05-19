@@ -42,7 +42,7 @@
 
 
 
-@media screen and (min-width: 540px) {
+@media screen and (min-width: 2000px) {
   .rightBar {
     display: flex;
     flex-direction: column;

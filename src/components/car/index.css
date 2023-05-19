@@ -429,4 +429,9 @@
     display: flex;
     width:520px;
   }
+  .carDetails{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
 }

@@ -72,6 +72,11 @@
 
 
 @media screen and (min-width: 540px) {
+
+  .imageWrapper{
+    display: none;
+  }
+  
   .footerPhotoSide{
     width: 100% !important;
   }

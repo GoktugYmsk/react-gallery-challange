@@ -70,3 +70,24 @@
     }
 
 }
+
+
+@media screen and (min-width: 540px) {
+
+    .modul{
+        display: flex !important;
+        flex-direction: column;
+        align-items: center !important;
+        justify-content: center !important;
+        position: fixed;
+        margin-right: 420px !important;
+        height: auto !important;
+        width: auto !important;
+    }
+
+    .modul img{
+        display: flex;
+        width: 50%;
+    }
+
+  }
