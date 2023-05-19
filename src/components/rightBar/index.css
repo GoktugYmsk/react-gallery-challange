@@ -39,3 +39,21 @@
   width: 400px;
   right: 300px !important;
 }
+
+
+
+@media screen and (min-width: 540px) {
+  .rightBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
+    height: auto;
+    width: 100px;
+  }
+
+  .rightBarIcons {
+    font-size: 80px;
+    margin-bottom: 4px;
+  }
+}
