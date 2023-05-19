@@ -42,7 +42,7 @@ function Carousel() {
 
   return (
     <div className='row' >
-      <div className=" col-12 carouselFooterPage">
+      <div className=" col-12 col-lg-12 carouselFooterPage">
         <button className='carouselPrew' onClick={prev}>&lt;</button>
         <div className="pageCarousel">
           <h3>{pages[currentPage].title}</h3>

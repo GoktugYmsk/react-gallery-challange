@@ -73,7 +73,7 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
         }
         {closeCarPage &&
           <div className='row' >
-            <div className='col-12' >
+            <div className='col-12 col-lg-12' >
               <div className='sliderPage' >
                 <div className='sliderBar' >
                   <Slider list={list} />
@@ -94,7 +94,7 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
           <div className='row' >
             <div className='carInfoPage' >
               <div className='row' >
-                <div className="col-12 carList">
+                <div className="col-12 col-lg-12 carList">
                   {list.map(car => (
                     <div className="car" key={car.id} onClick={() => handleCarClick(car.id)}>
                       <h3 className='carName'>{car.title}</h3>
@@ -105,13 +105,13 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
               </div>
             </div>
             <div className='row' >
-              <div className='detailPageObject col-12' >
+              <div className='detailPageObject col-12 col-lg-12' >
                 <p>Daha Fazla Bilgi için</p>
                 <button onClick={goToDetail}>Devam et</button>
               </div>
             </div>
             <div className='row ' >
-              <div className='col-12 suvPacket '>
+              <div className='col-12 col-lg-12 suvPacket '>
                 <h4 className='suvh4' >Hyundai SUV Ailesi</h4>
                 <div className='galleryContainer'>
                   <div className='galleryWrapper' >
@@ -134,13 +134,17 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
                       </div>
                     ))}
                   </div>
-                  <div className='galleryMod-controls'>
-                    <button className={`rightClick ${buttonActive ? 'buttonActive' : ''}`} onClick={handleNextClick}>
-                      <FaChevronRight />
-                    </button>
-                    <button className='leftClick' onClick={handlePrevClick} >
-                      <FaChevronLeft />
-                    </button>
+                  <div className='row' >
+                    <div className='col-lg-12' >
+                      <div className='galleryMod-controls'>
+                        <button className={`rightClick ${buttonActive ? 'buttonActive' : ''}`} onClick={handleNextClick}>
+                          <FaChevronRight />
+                        </button>
+                        <button className='leftClick' onClick={handlePrevClick} >
+                          <FaChevronLeft />
+                        </button>
+                      </div>
+                    </div>
                   </div>
                   <div className='actionCircle' >
                     <div onClick={handlePrevClick} className={`circle ${optionPage ? "buttonactive" : ""}`} ></div>
@@ -162,7 +166,7 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
         )}
         {closeCarPage &&
           <div className='row footer__container ' >
-            <div className='col-12 footerUstBar ' >
+            <div className='col-12 col-lg-12 footerUstBar ' >
               <div className={`footerImage ${selectedCar ? 'selected' : ''}`}>
                 <img className='footerPhoto' src='https://www.hyundai.com/content/dam/hyundai/template_en/en/images/home/home-big-banner-maintenance-grill-of-navy-car-pc.jpg' />
                 <div className='carCarePage' >

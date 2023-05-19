@@ -9,7 +9,7 @@ function Slider() {
   return (
     <div className="carousel-container">
       <div className='row'>
-        <div className='col-12' >
+        <div className='col-12 col-lg-12' >
           <Carousel interval={5000}>
             <Carousel.Item className='imageCaorusel' >
               <img

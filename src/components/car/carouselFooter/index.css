@@ -108,7 +108,7 @@
 
 @media screen and (max-width: 540px) {
 
-    .carouselFooterPage{
+    .carouselFooterPage {
         position: relative;
         right: 150px;
         width: 430px;
@@ -135,12 +135,26 @@
         position: relative;
         margin-right: 120px;
     }
-    .pageCarousel{
+
+    .pageCarousel {
         position: relative;
         left: 120px;
     }
-    .pagination{
+
+    .pagination {
         position: relative;
         right: 350px;
     }
+}
+
+
+@media screen and (min-width: 540px) {
+    .carouselFooterPage {
+        display: flex !important;
+        align-items: center;
+        justify-content: center !important;
+        position: relative;
+        right: 160px;
+    }
+
 }

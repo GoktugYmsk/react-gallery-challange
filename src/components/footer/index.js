@@ -17,24 +17,26 @@ function Footer({ selectedCar }) {
       {
         closeCarPage &&
         <div className="footerPhotoSide">
-          <div className="columnPhoto">
-            <div className="imageWrapper">
-              <img src={philosophy} />
-              <p className='philosophyP' >Felsefemiz</p>
+          <div className='row' >
+            <div className="columnPhoto col-lg-6 ">
+              <div className="imageWrapper">
+                <img src={philosophy} />
+                <p className='philosophyP' >Felsefemiz</p>
+              </div>
+              <div className="imageWrapper">
+                <img src={about} />
+                <p className='aboutP' >Hakkımızda</p>
+              </div>
             </div>
-            <div className="imageWrapper">
-              <img src={about} />
-              <p className='aboutP' >Hakkımızda</p>
-            </div>
-          </div>
-          <div className="columnPhoto">
-            <div className="imageWrapper">
-              <img src={mediaCenter} />
-              <p className='mediaCenterP' >Medya Merkezi</p>
-            </div>
-            <div className="imageWrapper">
-              <img src={offerOfMounth} />
-              <p className='offerOfMounthP' >Ayın Teklifleri</p>
+            <div className="columnPhoto col-lg-6">
+              <div className="imageWrapper">
+                <img src={mediaCenter} />
+                <p className='mediaCenterP' >Medya Merkezi</p>
+              </div>
+              <div className="imageWrapper">
+                <img src={offerOfMounth} />
+                <p className='offerOfMounthP' >Ayın Teklifleri</p>
+              </div>
             </div>
           </div>
         </div>

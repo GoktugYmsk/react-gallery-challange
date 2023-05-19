@@ -78,9 +78,42 @@
     opacity: 0.8;
 }
 
+.navbar__dropdown{
+    color: rgb(0, 170, 210) !important;
+    background: none;
+    border-style: none;
+}
+
+.selam{
+    background: red;
+}
+
 
 @media screen and (max-width: 540px) {
     .navbar__main {
         display: none;
     }
 }
+
+
+@media screen and (min-width: 540px) {
+    .detailPageObject {
+        display: none;
+    }
+    .carouselAltInfo{
+        display: none !important;
+    }
+    
+}
+
+
+
+
+@media screen and (max-width: 2000px) {
+    .navbar {
+        width: 100% !important;
+        display: flex;
+    }
+}
+
+
