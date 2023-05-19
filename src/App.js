@@ -37,7 +37,7 @@ function App() {
       <Footer selectedCar={selectedCar} />
       {closeCarPage &&
         <div className='onlineSupport'>
-          <BiMessageDetail className='messageIcon' /> Hyundai Canlı Destek
+          <BiMessageDetail className='messageIcon' /> <span> Hyundai Canlı Destek </span>
         </div>
       }
     </div>

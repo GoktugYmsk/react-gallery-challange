@@ -36,7 +36,7 @@ function Popup({ selectedCar, setSelectedCar }) {
 
   return (
     <div className='row'>
-      <div className='col-12'>
+      <div className='col-12 col-lg-12'>
         <div ref={popupRef} className='modul'>
           <img className='popupImage' src={selectedCar.image} alt={`Image of ${selectedCar.title}`} />
           <h2 className='selectedCarTitle'>{selectedCar.title}</h2>

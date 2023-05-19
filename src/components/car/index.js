@@ -157,7 +157,7 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
         )}
         {selectedCar && (
           <div className='row' >
-            <div className='col-12' >
+            <div className='col-12 col-lg-12 ' >
               <div className="carDetails">
                 <Popup selectedCar={selectedCar} setSelectedCar={setSelectedCar} />
               </div>
