@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { productList } from '../../assets/data';
 import { setRightBar } from '../configure/configure';
+import { setSales } from '../configure/configure';
 import './index.css';
 
 function Detail({ setcloseCarPage }) {
@@ -16,6 +17,7 @@ function Detail({ setcloseCarPage }) {
     navigate('/Hyundai');
     dispatch(setcloseCarPage(true))
     dispatch(setRightBar(true))
+    dispatch(setSales(false))
   };
 
   return (
