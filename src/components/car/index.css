@@ -372,6 +372,7 @@
   }
 
   .galleryWrapper {
+    display: none;
     height: 220px !important;
     background: red;
   }

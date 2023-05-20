@@ -151,10 +151,32 @@
 @media screen and (min-width: 540px) {
     .carouselFooterPage {
         display: flex !important;
-        align-items: center;
+        align-items: center !important;
         justify-content: center !important;
         position: relative;
         right: 160px;
+        width: 80%;
     }
 
+    .pageCarousel {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: relative;
+        left: 250px;
+    }
+
+    .carouselPrew {
+        position: relative;
+        left: 300px;
+    }
+
+    .carouselNext {
+        position: relative;
+        left: 150px;
+    }
+
+    .pagination {
+        display: none;
+    }
 }

@@ -22,7 +22,6 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
   const [details, setDetails] = useState(false)
 
   const sales = useSelector((state) => state.componentControl.sales)
-
   const closeCarPage = useSelector((state) => state.componentControl.closeCarPage)
 
   const goToDetail = () => {
