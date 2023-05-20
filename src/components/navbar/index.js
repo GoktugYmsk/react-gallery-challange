@@ -42,39 +42,34 @@ function NavbarHyundai({ selectedCar, navigate }) {
   };
 
   return (
-    <div className='row'>
-    <div className='col-xll-12'>
-      <Navbar className={`navbar ${selectedCar ? 'selected' : ''}`} variant="dark" expand="lg">
-        <Container>
-          <Navbar.Brand href="#home">
-            <img onClick={handleClick} className="navbarLogo" src={imageLogo} alt="Logo" />
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link className='navbar__tag' href="#home">Modeller</Nav.Link>
-              <Nav.Link className='navbar__tag' href="#link">Satış</Nav.Link>
-              <Nav.Link className='navbar__tag' href="#link">Satış Sonrası</Nav.Link>
-              <Nav.Link className='navbar__tag' href="#link">Hakkımızda</Nav.Link>
-              <Nav.Link className='navbar__tag' href="#link">Yetkili Satıcı ve Servis</Nav.Link>
-              <NavDropdown className='navbar__dropdown' title="Entrikifasyon Teknolojisi" id="basic-nav-dropdown">
-                <NavDropdown.Item className='navbar__tag' href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    </div>
-  </div>
-  
+    <Navbar className={`navbar ${selectedCar ? 'selected' : ''}`} variant="dark" expand="lg">
+      <Container>
+        <Navbar.Brand href="#home">
+          <img onClick={handleClick} className="navbarLogo" src={imageLogo} alt="Logo" />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link className='navbar__tag' href="#home">Modeller</Nav.Link>
+            <Nav.Link className='navbar__tag' href="#link">Satış</Nav.Link>
+            <Nav.Link className='navbar__tag' href="#link">Satış Sonrası</Nav.Link>
+            <Nav.Link className='navbar__tag' href="#link">Hakkımızda</Nav.Link>
+            <Nav.Link className='navbar__tag' href="#link">Yetkili Satıcı ve Servis</Nav.Link>
+            <NavDropdown className='navbar__dropdown' title="Entrikifasyon Teknolojisi" id="basic-nav-dropdown">
+              <NavDropdown.Item className='navbar__tag' href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Another action
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 
