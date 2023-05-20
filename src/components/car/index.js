@@ -103,10 +103,10 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
                 </div>
               </div>
             </div>
-            <div className='row' >
-              <div className='detailPageObject col-12 col-lg-12' >
+            <div className='row detail__main ' >
+              <div className='col-12 col-lg-12 detailPageObject ' >
                 <p>Daha Fazla Bilgi için</p>
-                <button onClick={goToDetail}>Devam et</button>
+                <button className='detailPageObject__button' onClick={goToDetail}>Devam et</button>
               </div>
             </div>
             <div className='row ' >

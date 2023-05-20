@@ -293,6 +293,8 @@
     flex-direction: column;
     position: relative;
     right: 660px;
+    background: red;
+    width: 100%;
   }
 
   .imageCar {
@@ -394,45 +396,73 @@
 
 
 @media screen and (min-width: 540px) {
+  .detailPageObject {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 20%;
+  }
+
+  .detailPageObject__button {
+    height: 100px !important;
+    width: 200px !important;
+  }
+
   .footerPhoto {
     height: auto;
     object-fit: cover;
   }
-  .sliderPage{
+
+  .sliderPage {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     padding-bottom: 100px;
     height: auto !important;
   }
-  .sliderBar{
+
+  .sliderBar {
     display: flex;
     align-items: center !important;
     justify-content: center !important;
     width: 80% !important;
 
   }
-  .galleryContainer{
+
+  .galleryContainer {
     display: flex;
     flex-direction: column;
     align-items: center !important;
     justify-content: center !important;
     width: 100% !important;
   }
-  .galleryWrapper{
-    display: flex;
 
+  .galleryWrapper {
+    display: flex;
     width: 100% !important;
     align-items: center !important;
     justify-content: center !important;
   }
-  .galleryMod img{
+
+  .galleryMod img {
     display: flex;
-    width:520px;
+    width: 520px;
   }
-  .carDetails{
+
+  .carDetails {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .detailPageObject {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 30%;
   }
 }
