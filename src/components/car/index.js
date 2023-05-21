@@ -82,7 +82,7 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
           </div>
         }
         <div className='row' >
-          <div className='col-12 carouselAltInfo ' >
+          <div className='col-12 col-lg-12 carouselAltInfo ' >
             <li>Fiyat Listesi</li>
             <li>Ayın Özel Teklifleri</li>
             <li>Test Sürüşü</li>

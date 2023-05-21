@@ -396,6 +396,7 @@
 
 
 @media screen and (min-width: 540px) {
+
   .detailPageObject {
     display: flex;
     flex-direction: column;
@@ -455,9 +456,20 @@
     align-items: center !important;
     justify-content: center !important;
   }
+
+  .carouselAltInfo{
+    display: flex !important;
+  }
 }
 
 @media screen and (min-width: 760px) {
+  .carouselAltInfo{
+    display: flex !important;
+    background: red;
+    width: 100%;
+    position: relative;
+    right: 350px;
+  }
   .detailPageObject {
     display: flex;
     flex-direction: column;
