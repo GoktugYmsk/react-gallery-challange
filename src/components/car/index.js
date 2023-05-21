@@ -12,6 +12,7 @@ import { setcloseCarPage, setRightBar, setSales } from '../configure/configure';
 import { imageData } from '../../assets/data';
 import Carousel from './carouselFooter';
 import SalesScreen from './salesScreen';
+import LoginPopup from './loginPopup';
 import './index.css';
 
 function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
@@ -23,6 +24,7 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
 
   const sales = useSelector((state) => state.componentControl.sales)
   const closeCarPage = useSelector((state) => state.componentControl.closeCarPage)
+  const closeLoginPopup = useSelector((state) => state.componentControl.closeLoginPopup)
 
   const goToDetail = () => {
     dispatch(setcloseCarPage(false))
@@ -192,6 +194,7 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
         {closeCarPage &&
           <Carousel />
         }
+        {closeLoginPopup && <LoginPopup/> }
       </div>
       {!closeCarPage && sales === false && <Detail setcloseCarPage={setcloseCarPage} />}
     </>

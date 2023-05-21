@@ -4,6 +4,7 @@ const initialState = {
     closeCarPage: true,
     sales: false,
     rightBar: true,
+    closeLoginPopup: true,
 }
 
 export const configure = createSlice({
@@ -15,11 +16,14 @@ export const configure = createSlice({
         }, setSales: (state, action) => {
             state.sales = action.payload;
         }, setRightBar: (state, action) => {
-            state.sales = action.payload;
+            state.rightBar = action.payload;
+        },
+        setCloseLoginPopup: (state, action) => {
+            state.closeLoginPopup = action.payload;
         },
     }
 })
 
-export const { setcloseCarPage, setSales,setRightBar } = configure.actions
+export const { setcloseCarPage, setSales,setRightBar,setCloseLoginPopup } = configure.actions
 
 export default configure.reducer
