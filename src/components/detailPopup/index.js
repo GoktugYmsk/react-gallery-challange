@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { productList } from '../../assets/data';
 import { setRightBar } from '../configure/configure';
 import { setSales } from '../configure/configure';
-import './index.css';
+import './index.scss';
 
 function Detail({ setcloseCarPage }) {
   const [vehicle, setVehicle] = useState(productList);
@@ -22,7 +22,7 @@ function Detail({ setcloseCarPage }) {
 
   return (
     <div className='row' >
-      <div className='col-12' >
+      <div className='col-12 col-lg-12' >
     <div className='detailContainer'>
       <Helmet>
         <title> Car Details </title>

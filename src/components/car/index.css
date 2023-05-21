@@ -403,6 +403,8 @@
     align-items: center !important;
     justify-content: center !important;
     width: 20%;
+    position: relative;
+    right: 60px;
   }
 
   .detailPageObject__button {
@@ -472,6 +474,10 @@
     right: 220px;
 
   }
+
+  .detailPageObject p {
+    font-size: 22px;
+  }
 }
 
 @media screen and (min-width: 760px) {
@@ -489,5 +495,52 @@
     align-items: center !important;
     justify-content: center !important;
     width: 30%;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+
+  .detailPageObject {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 20%;
+    position: relative;
+    left: 250px !important;
+  }
+
+  .galleryContainer {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-left: 60px;
+    box-shadow: 0 0 8px 4px rgb(45, 45, 45);
+    width: 95% !important;
+  }
+
+  .galleryWrapper {
+    width: 80% !important;
+  }
+
+  .galleryMod img {
+    width: 320px;
+  }
+
+  .leftClick {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative;
+    right: 300px;
+    bottom: 160px !important;
+  }
+
+  .rightClick {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    margin-right: 1100px;
   }
 }

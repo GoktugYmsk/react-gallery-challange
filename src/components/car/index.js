@@ -8,7 +8,7 @@ import { FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 import Detail from '../detailPopup';
 import Popup from '../popup';
 import Slider from '../slider'
-import { setcloseCarPage, setRightBar } from '../configure/configure';
+import { setcloseCarPage, setRightBar, setSales } from '../configure/configure';
 import { imageData } from '../../assets/data';
 import Carousel from './carouselFooter';
 import SalesScreen from './salesScreen';
@@ -81,14 +81,16 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
             </div>
           </div>
         }
-        <div className='row' >
-          <div className='col-12 col-lg-12 carouselAltInfo ' >
-            <li>Fiyat Listesi</li>
-            <li>Ayın Özel Teklifleri</li>
-            <li>Test Sürüşü</li>
-            <li>Online Showroom</li>
+        {closeCarPage &&
+          <div className='row' >
+            <div className='col-12 col-lg-12 carouselAltInfo ' >
+              <li>Fiyat Listesi</li>
+              <li>Ayın Özel Teklifleri</li>
+              <li>Test Sürüşü</li>
+              <li>Online Showroom</li>
+            </div>
           </div>
-        </div>
+        }
         {closeCarPage && (
           <div className='row' >
             <div className='carInfoPage' >
@@ -101,7 +103,7 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
                     </div>
                   ))}
                 </div>
-              </div>  
+              </div>
             </div>
             <div className='row detail__main ' >
               <div className='col-12 col-lg-12 detailPageObject ' >
@@ -134,7 +136,7 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
                     ))}
                   </div>
                   <div className='row' >
-                    <div className='col-lg-12' >
+                    <div className='col-6 col-lg-12' >
                       <div className='galleryMod-controls'>
                         <button className={`rightClick ${buttonActive ? 'buttonActive' : ''}`} onClick={handleNextClick}>
                           <FaChevronRight />
@@ -145,9 +147,13 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
                       </div>
                     </div>
                   </div>
-                  <div className='actionCircle' >
-                    <div onClick={handlePrevClick} className={`circle ${optionPage ? "buttonactive" : ""}`} ></div>
-                    <div onClick={handleNextClick} className={`circle ${!optionPage ? "buttonactive" : ""}`} ></div>
+                  <div className='row' >
+                    <div className='col-12 col-lg-12' >
+                      <div className='actionCircle' >
+                        <div onClick={handlePrevClick} className={`circle ${optionPage ? "buttonactive" : ""}`} ></div>
+                        <div onClick={handleNextClick} className={`circle ${!optionPage ? "buttonactive" : ""}`} ></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -188,11 +194,6 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
         }
       </div>
       {!closeCarPage && sales === false && <Detail setcloseCarPage={setcloseCarPage} />}
-      {/*********************************************** */}
-      {/*********************************************** */}
-      {/*********************************************** */}
-      {/*********************************************** */}
-      {/*********************************************** */}
     </>
   );
 }
