@@ -101,7 +101,7 @@ function Car({ handleCarClick, selectedCar, list, setSelectedCar, navigate }) {
                     </div>
                   ))}
                 </div>
-              </div>
+              </div>  
             </div>
             <div className='row detail__main ' >
               <div className='col-12 col-lg-12 detailPageObject ' >
