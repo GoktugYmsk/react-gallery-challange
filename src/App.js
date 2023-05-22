@@ -16,6 +16,7 @@ function App() {
   const [list, setList] = useState(initialData);
   const [selectedCar, setSelectedCar] = useState(false);
   const navigate = useNavigate();
+  const closeLoginPopup = useSelector((state) => state.componentControl.closeLoginPopup)
 
   const closeCarPage = useSelector((state) => state.componentControl.closeCarPage)
 

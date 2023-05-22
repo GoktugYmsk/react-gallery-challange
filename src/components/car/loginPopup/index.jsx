@@ -1,18 +1,19 @@
 import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { setCloseLoginPopup } from '../../configure/configure';
 import './index.scss';
 
 function LoginPopup() {
   const dispatch = useDispatch();
+  const closeLoginPopup = useSelector(state => state.closeLoginPopup);
 
   const closePopup = () => {
     dispatch(setCloseLoginPopup(false));
   };
 
   const handleKeyPress = (event) => {
-    if (event.keyCode === 27) { 
+    if (event.keyCode === 27) {
       closePopup();
     }
   };
@@ -23,6 +24,14 @@ function LoginPopup() {
       document.removeEventListener('keydown', handleKeyPress);
     };
   }, []);
+
+  useEffect(() => {
+    if (closeLoginPopup) {
+      document.body.style.opacity = 0.5; // Sayfaların opaklık değerini düşürmek için body elementinin opacity stilini ayarlayabilirsiniz
+    } else {
+      document.body.style.opacity = 1; // CloseLoginPopup false olduğunda opaklık değerini geri yükseltmek için body elementinin opacity stilini ayarlayabilirsiniz
+    }
+  }, [closeLoginPopup]);
 
   return (
     <div className='LoginPopup-container'>
