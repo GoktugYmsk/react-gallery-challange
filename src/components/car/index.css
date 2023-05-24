@@ -387,18 +387,13 @@
     height: auto;
     object-fit: cover;
   }
-
-  .carDetails {
-    background: red;
-  }
 }
 
 
 
 @media screen and (min-width: 540px) {
-
   .detailPageObject {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center !important;
     justify-content: center !important;
@@ -478,6 +473,22 @@
   .detailPageObject p {
     font-size: 22px;
   }
+
+  .carouselAltInfo {
+    display: none !important;
+  }
+
+  .carList {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(6, 1fr) !important;
+  }
+
+  .carList img {
+    height: 200px;
+    width: 250px;
+    object-fit: cover;
+  }
 }
 
 @media screen and (min-width: 760px) {
@@ -495,6 +506,18 @@
     align-items: center !important;
     justify-content: center !important;
     width: 30%;
+  }
+
+  .carList {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-rows: repeat(4, 1fr) !important;
+  }
+  
+  .carList img {
+    height: 300px;
+    width: 420px;
+    object-fit: cover;
   }
 }
 
