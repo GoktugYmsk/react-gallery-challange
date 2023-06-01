@@ -27,9 +27,9 @@ function LoginPopup() {
 
   useEffect(() => {
     if (closeLoginPopup) {
-      document.body.style.opacity = 0.5; // Sayfaların opaklık değerini düşürmek için body elementinin opacity stilini ayarlayabilirsiniz
+      document.body.style.opacity = 0.5;
     } else {
-      document.body.style.opacity = 1; // CloseLoginPopup false olduğunda opaklık değerini geri yükseltmek için body elementinin opacity stilini ayarlayabilirsiniz
+      document.body.style.opacity = 1; 
     }
   }, [closeLoginPopup]);
 
